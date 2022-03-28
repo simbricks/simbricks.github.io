@@ -1,0 +1,527 @@
+@import 'normalize';
+
+
+$width: 1000px;
+$topbar-height: 4rem;
+$narrow-cutoff: $width;
+
+$colA:    hsl(185, 100%, 32%);
+$colA_l1: hsl(185, 100%, 38%);
+$colA_l2: hsl(185, 100%, 44%);
+$colA_d1: hsl(185, 100%, 26%);
+$colA_d2: hsl(185, 100%, 20%);
+$colA_d3: hsl(185, 100%, 14%);
+
+$colB:    hsl(18, 89%, 57%); /* orange */
+$colB_l1: hsl(18, 89%, 63%); /* orange */
+$colB_l2: hsl(18, 89%, 69%); /* orange */
+$colB_l3: hsl(18, 89%, 75%); /* orange */
+$colB_d1: hsl(18, 89%, 51%); /* orange */
+$colB_d2: hsl(18, 89%, 45%); /* orange */
+$colB_d3: hsl(18, 89%, 39%); /* orange */
+
+$colC:    hsl(77, 58%, 44%); /* green */
+$colC_l1: hsl(77, 58%, 50%); /* green */
+$colC_l2: hsl(77, 58%, 56%); /* green */
+$colC_l3: hsl(77, 58%, 62%); /* green */
+$colC_d1: hsl(77, 58%, 38%); /* green */
+$colC_d2: hsl(77, 58%, 32%); /* green */
+$colC_d3: hsl(77, 58%, 26%); /* green */
+
+$fontA: 'Exo 2', sans-serif;
+$fontB: 'Alegreya Sans', sans-serif;
+$fontFA: 'Font Awesome 6 Free';
+$fontFAb: 'Font Awesome 6 Brands';
+
+/******************************************************************************/
+/* default style */
+
+html, body {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: black;
+}
+
+li {
+    line-height: 1.5;
+    margin: 0pt 0pt 5pt 0pt;
+}
+
+h1, h2, h3, h4, h5 {
+    display: block;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: $colB;
+}
+
+a:hover {
+  color: $colC;
+}
+
+/******************************************************************************/
+/* Page Building Blocks */
+
+@mixin green-section {
+  /*background: linear-gradient(to right, $colC_d2, $colC);*/
+  background-color: $colC;
+  color: white;
+}
+
+@mixin orange-section {
+  background-color: $colB;
+  color: white;
+}
+
+@mixin blue-section {
+  background-color: $colA;
+  color: white;
+}
+
+@mixin header-bricks {
+  background-image: url('images/bricks_tumbling_outline.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+
+/******************************************************************************/
+/* Layout */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+
+  font-size: 12pt;
+
+  background-color: white;
+}
+
+div#topbar {
+  width: 100%;
+  height: $topbar-height;
+
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+
+  background-color: white;
+
+  header {
+    width: $width;
+    margin: 0.5rem auto;
+
+    img#logo {
+      vertical-align: top;
+      height: 3rem;
+    }
+    a.title {
+      font-family: $fontA;
+      padding-left: 0.5rem;
+      line-height: 1.4;
+      color: black;
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-decoration: none;
+    }
+
+    nav {
+      width: 0.7 * $width;
+      float: right;
+      ul {
+        margin: 0rem;
+        padding: 0rem;
+        li {
+          display: inline;
+          padding: 0rem 0.5rem;
+          a, a:hover {
+            font-family: $fontA;
+            font-weight: 400;
+            line-height: 3;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.2em;
+            color: #ccc;
+          }
+
+          a:hover {
+            color: $colB;
+          }
+
+          a.active {
+            color: $colB;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-top: $topbar-height;
+  article {
+    margin: 0rem;
+    padding: 0rem;
+  }
+  section {
+    margin: 2rem auto;
+    padding: 2rem 0rem;
+    width: $width;
+
+    h2, h3, p {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+footer {
+  @include orange-section;
+
+  width: $width;
+  margin: 0rem auto;
+  padding: 1rem 2rem;
+  text-align: center;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline;
+      padding: 0rem 1rem;
+
+      a, a:active {
+        color: white;
+        text-decoration: none;
+      }
+      a::before, a:active::before {
+        font-size: 2rem;
+        display: inline-block;
+
+        content: "";
+        text-align: center;
+        font-family: $fontFAb;
+        font-weight: bold;
+        /*vertical-align: -1rem;
+        line-height: 1rem;*/
+      }
+
+      a.slack::before {
+        content: "\f198";
+      }
+      a.github::before {
+        content: "\f09b";
+      }
+      a.twitter::before {
+        content: "\f099";
+      }
+    }
+
+
+  }
+}
+
+
+/******************************************************************************/
+/* Per-Page */
+
+article {
+  section.banner {
+    @include header-bricks;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      padding-top: 6em;
+      padding-right: 10em;
+    }
+
+    p {
+      display: block;
+
+      width: 0.6 * $width;
+      margin: auto auto;
+      padding-right: 15rem;
+      padding-top: 0rem;
+
+      color: white;
+      font-family: $fontA;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: right;
+    }
+  }
+}
+
+article.home {
+  section.banner {
+    @include green-section;
+
+    h1 {
+      visibility: hidden;
+    }
+  }
+
+  section.overview {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    div.textcol {
+      width: 0.4 * $width;
+      padding-left: 0rem;
+    }
+    div.imgcol {
+      width: 0.6 * $width;
+      height: 25rem;
+      background-color: grey;
+    }
+  }
+
+  section.features {
+    @include green-section;
+
+    ul {
+      list-style: none;
+      columns: 2;
+      padding-inline: 0rem;
+      padding: 0rem;
+      margin: 0rem;
+      margin-bottom: -4rem;
+
+      li {
+        margin-left: 4rem;
+        padding: 2rem;
+        line-height: 0.3;
+      }
+
+      li::before {
+        content: "";
+        text-align: center;
+        font-family: $fontFA;
+        color: $colB;
+        display: inline-block;
+        width: 5rem;
+        margin-left: -5rem;
+        font-weight: bold;
+        font-size: 2rem;
+        vertical-align: -1rem;
+        line-height: 1rem;
+      }
+
+      li.goal-endtoend::before {
+        content: "\f6ff";
+      }
+      li.goal-scalable::before {
+        content: "\e4b7";
+      }
+      li.goal-fast::before {
+        /*content: "\f625"; spedometer */
+        content: "\f135";
+      }
+      li.goal-modular::before {
+        content: "\f12e";
+      }
+      li.goal-accurate::before {
+        content: "\f140";
+      }
+      li.goal-deterministic::before {
+        content: "\f017";
+      }
+    }
+  }
+
+  section.techniques {
+    ul {
+      list-style: none;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      /*columns: 2;*/
+      padding: 0rem;
+      margin: 0rem;
+      margin-top: 1rem;
+
+      $gap: 35px;
+      $block-size: ($width - $gap) / 2;
+      gap: $gap;
+
+      li {
+        width: $block-size;
+        height: $block-size * 0.8;
+
+        background-color: $colA;
+
+        background-image: url('images/bricks_outlines.svg');
+        background-size: 205%;
+
+        margin: 0px;
+        color: white;
+        padding: 6rem 7rem 6rem 5rem;
+
+        font-size: 1.1rem;
+        line-height: 1.2;
+
+        h3 {
+          width: 90%;
+          /*text-align: center;*/
+          margin-left: -2rem;
+          margin-bottom: 1rem;
+
+          line-height: 1;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      }
+
+      li.technique-interfaces {
+        background-position: top left;
+      }
+      li.technique-sync {
+        background-position: top right;
+      }
+      li.technique-loose {
+        background-position: bottom left;
+      }
+      li.technique-parallel {
+        background-position: bottom right;
+      }
+
+    }
+  }
+
+  section.news {
+    ul {
+      display: flex;
+      flex-direction: row;
+
+      list-style: none;
+      padding-inline: 0rem;
+      $block-size: $width / 10 * 3;
+      column-gap: ($width - 3 * $block-size) / 2;
+
+      li {
+        display: block;
+        width: $block-size;
+        height: $block-size;
+        box-shadow: 0rem 1rem 2rem #ccc;
+        padding: 0rem;
+
+        font-size: 1.2rem;
+        color: #999;
+
+        h3 {
+          /*width: 100%;*/
+          padding-top: 3rem;
+          /*padding-left: 0rem;
+          padding-right: 0rem;*/
+
+          text-align: center;
+          text-transform: uppercase;
+          line-height: 1;
+          height: 4.5rem;
+          color: black;
+          font-weight: 600;
+        }
+        div.date {
+          text-align: left;
+          margin-top: -4rem;
+          margin-bottom: 4.5rem;
+          margin-left: 2rem;
+        }
+        p {
+          padding: 1rem 1rem;
+        }
+      }
+    }
+  }
+
+}
+
+
+article.publications {
+  section.banner {
+    @include blue-section;
+  }
+}
+
+
+article.community {
+  section.banner {
+    @include orange-section;
+  }
+
+  section.team {
+    ul {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      list-style: none;
+      padding-inline: 0rem;
+
+      li {
+        display: block;
+        text-align: center;
+
+        img {
+          width: $width / 5;
+        }
+
+        img.secondary {
+          display: none;
+        }
+
+        a {
+          color: $colA;
+          text-decoration: none;
+        }
+        a:hover {
+          color: $colB;
+        }
+
+        h3 {
+          text-transform: uppercase;
+          font-size: 1.3rem;
+        }
+
+        p {
+          margin-top: 0rem;
+        }
+      }
+
+      li:hover {
+        img.secondary {
+          display: inline;
+        }
+        img.primary {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

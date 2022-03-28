@@ -1,0 +1,102 @@
+<article class="home">
+  <section class="banner">
+    <h1>Home</h1>
+    <p>End-to-end system simulation through modular combination of component
+    simulators.</p>
+  </section>
+
+  <section class="overview">
+    <div class="textcol">
+      <h2>Overview</h2>
+      <p>SimBricks is a simulation framework that enables full end-to-end
+      evaluation of modern network systems in simulation. Our primary aim is to
+      to enable network systems research and instruction &mdash; from rapid
+      prototyping to meaningful performance evaluation.</p>
+
+      <p>SimBricks modularly combines and connects multiple battle-tested
+      simulators for different components: machines (e.g. QEMU, gem5), hardware
+      components (e.g.  Verilator, Tofino, FEMU SSD), and networks (e.g. ns-3,
+      OMNeT++). SimBricks assembles multiple instances of these simulators into
+      simulated testbeds capable of running unmodified full system stacks,
+      including applications and operating systems such as Linux.</p>
+    </div>
+    <div class="imgcol"></div>
+  </section>
+
+  <section class="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li class="goal-endtoend"><strong>End-to-End:</strong>
+        simulate full network systems, with hosts, devices, network, and the
+        full software stack.
+      </li>
+      <li class="goal-scalable"><strong>Scalable:</strong>
+        simulate large network systems comprising tens or hundreds of separate
+        hosts and devices.
+      </li>
+      <li class="goal-fast"><strong>Fast:</strong>
+        keep simulation times as low as possible.
+      </li>
+      <li class="goal-modular"><strong>Modular:</strong>
+        enable flexible composition of simulators, where components can be added
+        and swapped independently.
+      </li>
+      <li class="goal-accurate"><strong>Accurate:</strong>
+        preserve accuracy of constituent simulators, correctly interface and
+        synchronize components.
+      </li>
+      <li class="goal-deterministic"><strong>Deterministic:</strong>
+        keep end-to-end simulation deterministic when individual simulators are
+        deterministic.
+      </li>
+    </ul>
+  </section>
+
+  <section class="techniques">
+    <h2>Techniques</h2>
+    <ul>
+      <li class="technique-interfaces">
+        <h3>Fixed natural component simulator interfaces</h3>
+        SimBricks defines an interface for each component type
+        to enable modular composition of simulators...
+      </li>
+      <li class="technique-sync">
+        <h3>Accurate and efficient synchronization</h3>
+        SimBricks ensures accurate simulation through correct time
+        synchronization, but with minimal runtime overhead...
+      </li>
+      <li class="technique-loose">
+        <h3>Loose coupling with message passing</h3>
+        SimBricks runs component simulators as separate processes that
+        communicate through message passing...
+      </li>
+      <li class="technique-parallel">
+        <h3>Parallel execution with shared memory queues</h3>
+        SimBricks runs simulators in parallel on different host cores and
+        connects them through optimized shared-memory queues...
+      </li>
+    </ul>
+  </section>
+
+  <section class="news">
+    <h2>News</h2>
+    <ul>
+      <!--<li>
+        <h3>SimBricks SIGCOMM 2022 Tutorial</h3>
+        <div class="date" title="Date">2022-04-30</div>
+        <p>We will organize a SimBricks tutorial at SIGCOMM 2022 in Amsterdam. More
+        details will follow later.</p>
+      </li>
+      <li>
+        <h3>Open-Source Beta Release</h3>
+        <div class="date" title="Date">2022-04-05</div>
+        <p>We have realeased the full SimBricks code open source on GitHub.</p>
+      </li>-->
+      <li>
+        <h3>SimBricks Website is Up</h3>
+        <div class="date" title="Date">2022-04-09</div>
+        <p>Our shiny new SimBricks website has gone live.</p>
+      </li>
+    </ul>
+  </section>
+</article>

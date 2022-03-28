@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--<link rel="preconnect" href="https://fonts.googleapis.com">-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>SimBricks</title>
+  <meta name="author" content="Antoine Kaufmann" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style type="text/css" media="all"><!--
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:0.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace, monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace, monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}html,body{font-family:'Alegreya Sans', sans-serif;color:black}li{line-height:1.5;margin:0pt 0pt 5pt 0pt}h1,h2,h3,h4,h5{display:block;font-family:'Exo 2', sans-serif;font-weight:400;margin:0px}h1{font-size:3rem;font-weight:200}h2{font-size:1.8rem;margin-bottom:1.5rem}a{color:#f36a30}a:hover{color:#8cb12f}*{box-sizing:border-box}html,body{margin:0px;padding:0px;font-size:12pt;background-color:white}div#topbar{width:100%;height:4rem;position:fixed;top:0px;z-index:100;background-color:white}div#topbar header{width:1000px;margin:0.5rem auto}div#topbar header img#logo{vertical-align:top;height:3rem}div#topbar header a.title{font-family:"Exo 2",sans-serif;padding-left:0.5rem;line-height:1.4;color:black;font-size:1.8rem;font-weight:300;text-decoration:none}div#topbar header nav{width:700px;float:right}div#topbar header nav ul{margin:0rem;padding:0rem}div#topbar header nav ul li{display:inline;padding:0rem 0.5rem}div#topbar header nav ul li a,div#topbar header nav ul li a:hover{font-family:"Exo 2",sans-serif;font-weight:400;line-height:3;text-transform:uppercase;text-decoration:none;letter-spacing:0.2em;color:#ccc}div#topbar header nav ul li a:hover{color:#f36a30}div#topbar header nav ul li a.active{color:#f36a30;font-weight:600}main{margin-top:4rem}main article{margin:0rem;padding:0rem}main section{margin:2rem auto;padding:2rem 0rem;width:1000px}main section h2,main section h3,main section p{margin-left:2rem;margin-right:2rem}footer{background-color:#f36a30;color:white;width:1000px;margin:0rem auto;padding:1rem 2rem;text-align:center}footer ul{list-style:none}footer ul li{display:inline;padding:0rem 1rem}footer ul li a,footer ul li a:active{color:white;text-decoration:none}footer ul li a::before,footer ul li a:active::before{font-size:2rem;display:inline-block;content:"";text-align:center;font-family:"Font Awesome 6 Brands";font-weight:bold}footer ul li a.slack::before{content:"\f198"}footer ul li a.github::before{content:"\f09b"}footer ul li a.twitter::before{content:"\f099"}article section.banner{background-image:url("images/bricks_tumbling_outline.svg");background-size:contain;background-repeat:no-repeat;background-position:center right;height:35rem;display:flex;align-items:center;flex-direction:column}article section.banner h1{padding-top:6em;padding-right:10em}article section.banner p{display:block;width:600px;margin:auto auto;padding-right:15rem;padding-top:0rem;color:white;font-family:"Exo 2",sans-serif;font-size:1.5rem;font-weight:400;text-align:right}article.home section.banner{background-color:#8cb12f;color:white}article.home section.banner h1{visibility:hidden}article.home section.overview{display:flex;flex-direction:row-reverse;align-items:center}article.home section.overview div.textcol{width:400px;padding-left:0rem}article.home section.overview div.imgcol{width:600px;height:25rem;background-color:grey}article.home section.features{background-color:#8cb12f;color:white}article.home section.features ul{list-style:none;columns:2;padding-inline:0rem;padding:0rem;margin:0rem;margin-bottom:-4rem}article.home section.features ul li{margin-left:4rem;padding:2rem;line-height:0.3}article.home section.features ul li::before{content:"";text-align:center;font-family:"Font Awesome 6 Free";color:#f36a30;display:inline-block;width:5rem;margin-left:-5rem;font-weight:bold;font-size:2rem;vertical-align:-1rem;line-height:1rem}article.home section.features ul li.goal-endtoend::before{content:"\f6ff"}article.home section.features ul li.goal-scalable::before{content:"\e4b7"}article.home section.features ul li.goal-fast::before{content:"\f135"}article.home section.features ul li.goal-modular::before{content:"\f12e"}article.home section.features ul li.goal-accurate::before{content:"\f140"}article.home section.features ul li.goal-deterministic::before{content:"\f017"}article.home section.techniques ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:space-between;padding:0rem;margin:0rem;margin-top:1rem;gap:35px}article.home section.techniques ul li{width:482.5px;height:386px;background-color:#0096a3;background-image:url("images/bricks_outlines.svg");background-size:205%;margin:0px;color:white;padding:6rem 7rem 6rem 5rem;font-size:1.1rem;line-height:1.2}article.home section.techniques ul li h3{width:90%;margin-left:-2rem;margin-bottom:1rem;line-height:1;font-weight:600;text-transform:uppercase}article.home section.techniques ul li.technique-interfaces{background-position:top left}article.home section.techniques ul li.technique-sync{background-position:top right}article.home section.techniques ul li.technique-loose{background-position:bottom left}article.home section.techniques ul li.technique-parallel{background-position:bottom right}article.home section.news ul{display:flex;flex-direction:row;list-style:none;padding-inline:0rem;column-gap:50px}article.home section.news ul li{display:block;width:300px;height:300px;box-shadow:0rem 1rem 2rem #ccc;padding:0rem;font-size:1.2rem;color:#999}article.home section.news ul li h3{padding-top:3rem;text-align:center;text-transform:uppercase;line-height:1;height:4.5rem;color:black;font-weight:600}article.home section.news ul li div.date{text-align:left;margin-top:-4rem;margin-bottom:4.5rem;margin-left:2rem}article.home section.news ul li p{padding:1rem 1rem}article.publications section.banner{background-color:#0096a3;color:white}article.community section.banner{background-color:#f36a30;color:white}article.community section.team ul{margin-top:1rem;display:flex;flex-direction:row;justify-content:space-around;list-style:none;padding-inline:0rem}article.community section.team ul li{display:block;text-align:center}article.community section.team ul li img{width:200px}article.community section.team ul li img.secondary{display:none}article.community section.team ul li a{color:#0096a3;text-decoration:none}article.community section.team ul li a:hover{color:#f36a30}article.community section.team ul li h3{text-transform:uppercase;font-size:1.3rem}article.community section.team ul li p{margin-top:0rem}article.community section.team ul li:hover img.secondary{display:inline}article.community section.team ul li:hover img.primary{display:none}
+    --></style>
+  <link href="fa/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Exo+2:wght@200;300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="topbar">
+    <header class="toplevel">
+      <a href="index.html" class="logo"><img src="images/simbricks_logo.svg" alt="SimBricks Logo" id="logo"/></a>
+      <a href="index.html" class="title">SimBricks</a>
+
+      <nav class="toplevel" title="Top-level Navigation">
+        <ul class="l1">
+          <li><a href="index.html" class="active">Home</a></li>
+          <!--<li><a href="use_cases.html"
+            class="">Use-Cases</a></li>-->
+          <li><a href="publications.html" class="">Publications</a></li>
+          <li><a href="community.html" class="">Community</a></li>
+          <li><a href="https://simbricks.readthedocs.io">Docs</a></li>
+          <li><a href="https://github.com/simbricks">Code</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+
+  <main>
+<article class="home">
+  <section class="banner">
+    <h1>Home</h1>
+    <p>End-to-end system simulation through modular combination of component
+    simulators.</p>
+  </section>
+
+  <section class="overview">
+    <div class="textcol">
+      <h2>Overview</h2>
+      <p>SimBricks is a simulation framework that enables full end-to-end
+      evaluation of modern network systems in simulation. Our primary aim is to
+      to enable network systems research and instruction &mdash; from rapid
+      prototyping to meaningful performance evaluation.</p>
+
+      <p>SimBricks modularly combines and connects multiple battle-tested
+      simulators for different components: machines (e.g. QEMU, gem5), hardware
+      components (e.g.  Verilator, Tofino, FEMU SSD), and networks (e.g. ns-3,
+      OMNeT++). SimBricks assembles multiple instances of these simulators into
+      simulated testbeds capable of running unmodified full system stacks,
+      including applications and operating systems such as Linux.</p>
+    </div>
+    <div class="imgcol"></div>
+  </section>
+
+  <section class="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li class="goal-endtoend"><strong>End-to-End:</strong>
+        simulate full network systems, with hosts, devices, network, and the
+        full software stack.
+      </li>
+      <li class="goal-scalable"><strong>Scalable:</strong>
+        simulate large network systems comprising tens or hundreds of separate
+        hosts and devices.
+      </li>
+      <li class="goal-fast"><strong>Fast:</strong>
+        keep simulation times as low as possible.
+      </li>
+      <li class="goal-modular"><strong>Modular:</strong>
+        enable flexible composition of simulators, where components can be added
+        and swapped independently.
+      </li>
+      <li class="goal-accurate"><strong>Accurate:</strong>
+        preserve accuracy of constituent simulators, correctly interface and
+        synchronize components.
+      </li>
+      <li class="goal-deterministic"><strong>Deterministic:</strong>
+        keep end-to-end simulation deterministic when individual simulators are
+        deterministic.
+      </li>
+    </ul>
+  </section>
+
+  <section class="techniques">
+    <h2>Techniques</h2>
+    <ul>
+      <li class="technique-interfaces">
+        <h3>Fixed natural component simulator interfaces</h3>
+        SimBricks defines an interface for each component type
+        to enable modular composition of simulators...
+      </li>
+      <li class="technique-sync">
+        <h3>Accurate and efficient synchronization</h3>
+        SimBricks ensures accurate simulation through correct time
+        synchronization, but with minimal runtime overhead...
+      </li>
+      <li class="technique-loose">
+        <h3>Loose coupling with message passing</h3>
+        SimBricks runs component simulators as separate processes that
+        communicate through message passing...
+      </li>
+      <li class="technique-parallel">
+        <h3>Parallel execution with shared memory queues</h3>
+        SimBricks runs simulators in parallel on different host cores and
+        connects them through optimized shared-memory queues...
+      </li>
+    </ul>
+  </section>
+
+  <section class="news">
+    <h2>News</h2>
+    <ul>
+      <!--<li>
+        <h3>SimBricks SIGCOMM 2022 Tutorial</h3>
+        <div class="date" title="Date">2022-04-30</div>
+        <p>We will organize a SimBricks tutorial at SIGCOMM 2022 in Amsterdam. More
+        details will follow later.</p>
+      </li>
+      <li>
+        <h3>Open-Source Beta Release</h3>
+        <div class="date" title="Date">2022-04-05</div>
+        <p>We have realeased the full SimBricks code open source on GitHub.</p>
+      </li>-->
+      <li>
+        <h3>SimBricks Website is Up</h3>
+        <div class="date" title="Date">2022-04-09</div>
+        <p>Our shiny new SimBricks website has gone live.</p>
+      </li>
+    </ul>
+  </section>
+</article>
+  </main>
+
+
+  <div id="bottombar">
+    <footer>
+      <nav class="social" title="Social Navigation">
+        <ul>
+          <li><a href="https://github.com/simbricks" class="github" title="GitHub"></a></li>
+          <li><a href="https://twitter.com/sim_bricks" class="twitter" title="Twitter"></a></li>
+          <li><a href="https://simbricks.slack.com" class="slack" title="Slack"></a></li>
+        </ul>
+      </nav>
+      &copy; SimBricks, 2022
+    </footer>
+  </div>
+
+</body>
+</html>
