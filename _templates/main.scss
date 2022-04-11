@@ -294,7 +294,13 @@ article.home {
     div.imgcol {
       width: 0.6 * $width;
       height: 25rem;
-      background-color: grey;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      img {
+        width: 100%;
+      }
     }
   }
 
