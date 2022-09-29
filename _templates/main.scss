@@ -313,7 +313,7 @@ article.home {
       padding-inline: 0rem;
       padding: 0rem;
       margin: 0rem;
-      margin-bottom: -4rem;
+      /*margin-bottom: -4rem;*/
 
       li {
         margin-left: 4rem;
@@ -467,6 +467,32 @@ article.home {
 }
 
 
+
+@mixin replace-a-icon($sel, $content, $font: $fontFA) {
+  #{$sel}, #{$sel}:active {
+    /*display: inline-block;
+    white-space: nowrap;
+    width: 1.2rem;
+    visibility: hidden;*/
+    text-decoration: none;
+    font-size: 0;
+  }
+
+  #{$sel}::before, #{$sel}:active::before {
+    font-size: 12pt;
+    padding: 0rem 0.3rem;
+    visibility: visible;
+    content: $content;
+    text-align: center;
+    font-family: $font;
+    font-weight: bold;
+    text-decoration: none;
+    /*vertical-align: -1rem;
+    line-height: 1rem;*/
+  }
+}
+
+
 article.publications {
   section.banner {
     @include blue-section;
@@ -474,6 +500,12 @@ article.publications {
 
   section.call {
     @include green-section;
+  }
+
+  ul.publist {
+    @include replace-a-icon("a.pub-pdf", "\f1c1");
+    @include replace-a-icon("a.pub-video", "\f03d");
+    @include replace-a-icon("a.pub-artifact", "\f0c3");
   }
 }
 
