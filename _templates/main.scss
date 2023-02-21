@@ -420,29 +420,34 @@ article.home {
 
   section.news {
     ul {
-      display: flex;
-      flex-direction: row;
+      $num-shown: 3;
+      $block-size: $width / 10 * 3;
+      $remainder: ($width - $num-shown * $block-size);
+      $block-margin: floor($remainder / (2 * $num-shown) - 1px);
 
       list-style: none;
       padding-inline: 0rem;
-      $block-size: $width / 10 * 3;
-      column-gap: ($width - 3 * $block-size) / 2;
+      height: $block-size + 50px;
+      overflow-x:auto;
+      overflow-y:hidden;
+      white-space: nowrap;
 
       li {
-        display: block;
+        display: inline-block;
+        vertical-align:top;
+        white-space: normal;
+        margin: 0px $block-margin;
+
         width: $block-size;
         height: $block-size;
-        box-shadow: 0rem 1rem 2rem #ccc;
+        box-shadow: 0px $block-margin (2 * $block-margin) #ccc;
         padding: 0rem;
 
         font-size: 1.2rem;
         color: #999;
 
         h3 {
-          /*width: 100%;*/
           padding-top: 3rem;
-          /*padding-left: 0rem;
-          padding-right: 0rem;*/
 
           text-align: center;
           text-transform: uppercase;
