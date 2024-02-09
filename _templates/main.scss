@@ -513,6 +513,7 @@ article.publications {
     @include replace-a-icon("a.pub-artifact", "\f0c3");
     @include replace-a-icon("a.pub-slides", "\f5fd");
     @include replace-a-icon("a.pub-poster", "\f328");
+    @include replace-a-icon("a.pub-preprint", "\f573");
   }
 }
 
