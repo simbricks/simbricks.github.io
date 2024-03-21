@@ -108,7 +108,7 @@ body.about {
       margin-top: 1rem;
 
       $gap: 35px;
-      $block-size: calc(($width - $gap) / 2);
+      $block-size: calc((#{$width} - #{$gap}) / 2);
       gap: $gap;
 
       li {
