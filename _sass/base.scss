@@ -1,0 +1,24 @@
+@import 'normalize';
+@import 'fonts';
+@import 'slick';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+$breakpoint: 850px;
+@mixin media-mobile {
+  @media screen and (max-width: $breakpoint) { @content }
+}
+
+@import 'base-layout';
+@import 'base-design';
+
+@import 'about';
+@import 'people';
+@import 'projects';
+@import 'publications';

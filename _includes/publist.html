@@ -1,0 +1,48 @@
+<div class="publist">
+{% for p in publications %}
+  <h3>{{ p.title }}</h3>
+  <span class="authors">
+  {% for a in p.authors -%}
+    {%- if a.internal -%}
+      {%- assign person = site.data.people.people[a.internal]-%}
+      <span class="internal">{{ person.name }}</span>
+    {%- else if -%}
+    <span class="external">{{ a.external }}</span>
+    {%- endif -%}
+    {%- unless forloop.last -%}, {% endunless-%}
+  {%- endfor %}
+  </span>
+  <br>
+  {%- assign prefix = site.data.publications.types[p.type].prefix -%}
+  {{ prefix }}<span class="venue">{{ p.venue }}
+    {%- if p.series %} ({{ p.series }}){%- endif -%}</span>,
+    {% if p.location %}{{ p.location }},{% endif %} {{ p.year }}.
+  {%- if p.awards -%}
+    <br>
+    {% for a in p.awards -%}
+      <span class="award">{{ a }}</span>
+      {%- unless forloop.last -%}, {% endunless-%}
+    {%- endfor %}
+  {%- endif -%}
+  {%- if p.resources -%}
+    <br>
+    <span class="resources">
+    {% for r in p.resources %}
+      {%- if r.internal -%}
+        {%- capture link -%}
+          {{ "/assets/publications/" | relative_url}}{{ r.internal }}
+        {%- endcapture -%}
+      {%- else -%}
+        {%- assign link = r.external -%}
+      {%- endif -%}
+      {%- assign label = site.data.publications.restypes[r.type].label -%}
+      <span class="resource">
+        <a class="res-{{ r.type }}"
+          href="{{ link }}"
+          title="{{ label }}">[{{ label }}]</a>
+      </span>
+    {% endfor %}
+    </span>
+  {%- endif -%}
+{% endfor %}
+</div>

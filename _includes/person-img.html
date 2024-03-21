@@ -1,0 +1,6 @@
+{%- if person.img -%}
+<img class="profile" src="/assets/images/people/{{ person.img }}.png"
+  alt="{{ person.name }}" title="{{ person.name }}">
+{%- else -%}
+<img class="profile" src="/assets/images/people/anonymous.png">
+{%- endif -%}

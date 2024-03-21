@@ -1,0 +1,233 @@
+body.about {
+  header.page-header {
+    margin-bottom: 0px;
+    div.container {
+      div.logo {
+        img {
+          width: 0.75 * 400px;
+          max-width: 100%;
+          max-height: 0.75 * 400px;
+        }
+      }
+    }
+  }
+  section.research {
+    @include sec-white;
+
+    div.container {
+      display: flex;
+      gap: 2rem;
+
+      div.research-text {
+        width: 40%;
+      }
+      div.research-figure {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+
+        img {
+          width: 100%;
+          /*max-width: 400px;*/
+        }
+      }
+
+
+      @include media-mobile {
+        display: block;
+        div.research-text, div.research-figure {
+          width: inherit;
+        }
+      }
+    }
+  }
+  section.features {
+    @include sec-green;
+
+    ul {
+      list-style: none;
+      columns: 2;
+      padding-inline: 0rem;
+      padding: 0rem;
+      margin: 0rem;
+
+      li {
+        margin-left: 2rem;
+        padding: 2rem 0.5rem;
+        line-height: 0.3;
+      }
+
+      li::before {
+        content: "";
+        text-align: center;
+        font-family: $font-fa;
+        color: $col-sb-org;
+        display: inline-block;
+        width: 5rem;
+        margin-left: -5rem;
+        font-weight: bold;
+        font-size: 2rem;
+        vertical-align: -1rem;
+        line-height: 1rem;
+      }
+
+      li.goal-endtoend::before {
+        content: "\f6ff";
+      }
+      li.goal-scalable::before {
+        content: "\e4b7";
+      }
+      li.goal-fast::before {
+        /*content: "\f625"; spedometer */
+        content: "\f135";
+      }
+      li.goal-modular::before {
+        content: "\f12e";
+      }
+      li.goal-accurate::before {
+        content: "\f140";
+      }
+      li.goal-deterministic::before {
+        content: "\f017";
+      }
+    }
+  }
+  section.techniques {
+    @include sec-white;
+
+    ul {
+      list-style: none;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      padding: 0rem;
+      margin: 0rem;
+      margin-top: 1rem;
+
+      $gap: 35px;
+      $block-size: calc(($width - $gap) / 2);
+      gap: $gap;
+
+      li {
+        width: $block-size;
+        height: $block-size * 0.8;
+
+        background-color: $col-sb-blu;
+
+        background-image: url('/assets/images/bricks_outlines.svg');
+        background-size: 205%;
+
+        margin: 0px;
+        color: white;
+        padding: 4rem 5rem 6rem 5rem;
+
+        font-size: 1.1rem;
+        line-height: 1.2;
+
+        h3 {
+          width: 90%;
+          /*text-align: center;*/
+          margin-left: -2rem;
+          margin-bottom: 1rem;
+
+          line-height: 1;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      }
+
+      li.technique-interfaces {
+        background-position: top left;
+      }
+      li.technique-sync {
+        background-position: top right;
+      }
+      li.technique-loose {
+        background-position: bottom left;
+      }
+      li.technique-parallel {
+        background-position: bottom right;
+      }
+
+    }
+  }
+  section.news {
+    @include sec-white;
+
+    div.news-slider {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    button.slick-arrow {
+      position: absolute;
+      top: 30%;
+      font-size: 2.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    button.slick-disabled {
+      color: $col-os-grey;
+      cursor: default;
+    }
+
+    button.news-prev {
+      left: -48px;
+    }
+
+    button.news-next {
+      right: -48px;
+    }
+
+    div.news-item {
+      position: relative;
+      margin: 0rem 0.25rem;
+      padding: 0.75rem;
+
+      border: 1px #ccc solid;
+      height: 16rem;
+
+      div.date {
+        position: absolute;
+        top: 0.75rem;
+        color: #999;
+      }
+
+      h3 {
+        position: absolute;
+        top: 1.25rem;
+        padding-right: 0.75rem;
+      }
+
+      div.text {
+        position: absolute;
+        top: 4.5rem;
+        padding-right: 0.75rem;
+        color: #999;
+        font-size: 1.1rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  /* changes for mobile layout */
+  @include media-mobile {
+    section.features {
+      ul {
+        columns: 1;
+        padding-left: 2rem;
+      }
+    }
+
+    section.techniques {
+      ul {
+        justify-content: center;
+      }
+    }
+  }
+}

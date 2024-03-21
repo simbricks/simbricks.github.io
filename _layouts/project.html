@@ -1,0 +1,26 @@
+---
+layout: base
+---
+<article class="project">
+  <section>
+    <div class="container">
+      {{ content }}
+    </div>
+  </section>
+
+  {%- assign all_pubs = site.data.publications.publications -%}
+  {%- assign publications = all_pubs |
+      where_exp: "pub", "pub.projects contains page.slug" -%}
+  {%- if publications -%}
+  <section class="publications">
+    <div class="titlebar">
+      <div class="container">
+        <h2>Publications</h2>
+      </div>
+    </div>
+    <div class="container">
+      {% include publist.html %}
+    </div>
+  </section>
+  {%- endif %}
+</article>

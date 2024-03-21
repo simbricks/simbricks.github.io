@@ -1,0 +1,92 @@
+article.projects {
+  div.project-block {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+
+    div.people {
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      
+      img.profile {
+        width: 40px;
+        border-radius: 50%;
+        /*margin-left: -20px;*/
+      }  
+    }
+    div.logo {
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      height: 100px;
+      img.logo {
+        max-height: 100px;
+        max-width: 150px;
+      }
+    }
+    div.description {
+      height: 100px;
+      width: 350px;
+      margin: 0 auto;
+      text-align: left;
+      h3 {
+        /*text-align: center;*/
+        margin: 5px 0px;
+      }
+      p {
+        text-align: left;
+        margin: 0px;
+      }
+    }
+
+    div.link {
+      a {
+        /*color: $col-sb-gre;*/
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+
+  div.top {
+    border: 2px $col-sb-gre solid;
+  }
+
+  div.subprojects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: space-between;
+
+    /* filler to get bottom row to align left */
+    &:after {
+      content: "";
+      flex: auto;
+
+      @include media-mobile {
+        display: none;
+      }
+    }
+
+    div.project-block {
+      flex: 0 1 48%;
+      margin: 0 auto;
+
+      div.description {
+        height: 130px;
+        width: 350px;
+        padding: 0px 20px;
+      }
+
+      div.link {
+        text-align: left;
+        padding-left: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<header id="mainheader">
+  <nav id="navbar">
+    <div class="navcontainer">
+    <a class="brand-logo" href="{{ site.baseurl }}/">
+      <img src="assets/images/simbricks_logo.svg" alt="SimBricks Logo" id="logo"/>
+    </a>
+    <a class="brand" href="{{ site.baseurl }}/">
+      SimBricks
+    </a>
+
+    <button id="navbutton">=</button>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#navbutton').click(function(){
+          $('ul.l1').toggleClass("l1-active");
+        });
+      });
+    </script>
+
+    <ul class="l1">
+      {% for p in site.data.navigation.nav %}
+      {%- if page.permalink == p.link -%}
+      <li class="current">
+      {%- else %}
+      <li>
+      {%- endif %}
+        <a href="{{ site.baseurl }}{{ p.link }}">{{ p.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    </div>
+  </nav>
+</header>

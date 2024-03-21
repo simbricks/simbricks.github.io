@@ -1,0 +1,11 @@
+nav:
+  - title: Home
+    link: /
+  - title: Publications
+    link: /publications.html
+  - title: Community
+    link: /people.html
+  - title: Docs
+    link: https://simbricks.readthedocs.io/
+  - title: Code
+    link: https://github.com/simbricks

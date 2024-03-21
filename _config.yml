@@ -1,0 +1,26 @@
+url: "https://simbricks.github.io/"
+baseurl: ""
+title: "SimBricks"
+
+include:
+  - _pages
+exclude:
+  - README.md
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path.html
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+
+kramdown:
+  # set header offset for markdown parser as we use h1 as page title, so headers
+  # in the content need to start at h2
+  header_offset: 1

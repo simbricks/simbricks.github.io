@@ -1,0 +1,48 @@
+article.people {
+  div.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 100px;
+
+    @include media-mobile {
+      justify-content: center;
+    }
+
+    div.grid-item {
+      position: relative;
+      width: 200px;
+      height: 300px;
+      div.flags {
+        position: absolute;
+        top: 140px;
+        right: 10px;
+        img {
+          width: 40px;
+          border-radius: 50%;
+          margin-left: -10px;
+        }
+      }
+      img.profile {
+        width: 200px;
+        border-radius: 50%;
+      }
+      a, a:visited, a:hover, a:active {
+        color: inherit;
+        text-decoration: none;
+      }
+      h3 {
+        margin-bottom: 0px;
+      }
+      p.description {
+        margin: 5px auto;
+      }
+      p.pronouns {
+        margin: 0px;
+        color: $col-os-grey;
+      }
+    }
+  }
+}

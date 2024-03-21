@@ -1,0 +1,66 @@
+---
+layout: base
+---
+<article class="people">
+  {%- for category in site.data.people.categories %}
+  {%- assign catkey = category[0] %}
+  {%- assign cat = category[1] %}
+  <section>
+  <div class="container">
+    <h2 class="category" id="{{ catkey }}">{{ cat.title }}</h2>
+  {%- assign categorized_people = site.data.people.people | where: "category", catkey -%}
+  {%- assign sorted_people_ = categorized_people | sort: cat.sort_by %}
+  {%- if cat.sort_reverse -%}
+    {%- assign sorted_people = sorted_people_ | reverse %}
+  {%- else -%}
+    {%- assign sorted_people = sorted_people_%}
+  {%- endif -%}
+  {%- if cat.format == "full" -%}
+    <div class="grid">
+    {%- for person in sorted_people -%}
+    <div class="grid-item">
+        <div class="card hoverable">
+          {%- if person.website %}
+          <a href="{{ person.website }}">
+          {%- endif %}
+          {%- if person.img -%}
+          <img class="profile" src="/assets/images/people/{{ person.img }}.png">
+          {%- else -%}
+          <img class="profile" src="/assets/images/people/anonymous.png">
+          {%- endif -%}
+            <h3 class="card-title">{{ person.name }}</h3>
+          {%- if person.website %}
+          </a>
+          {%- endif %}
+            <p class="pronouns">{{ person.pronouns }}
+    
+            </p>
+            <p class="description">{{ person.description }}</p>
+        </div>
+
+    </div>
+    {%- endfor %}
+    </div>
+  {%- else -%}
+    <ul>
+    {%- for person in sorted_people -%}
+      <li>
+        {%- if person.website -%}<a href="{{ person.website }}">{%- endif -%}
+        {{ person.name }}
+        {%- if person.website -%}</a>{%- endif %}
+        ({{person.description}})
+      </li>
+    {%- endfor %}
+    </ul>
+  {%- endif -%}
+  </div>
+  </section>
+  {% endfor %}
+
+  <section>
+    <div class="container">
+      <h2 class="category">Get in Touch</h2>
+      {{ content }}
+    </div>
+  </section>
+</article>

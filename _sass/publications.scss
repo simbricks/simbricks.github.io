@@ -1,0 +1,49 @@
+div.publist {
+  @mixin replace-a-icon($sel, $content, $font: $font-fa) {
+    #{$sel}, #{$sel}:active {
+      text-decoration: none;
+      font-size: 0;
+    }
+
+    #{$sel}::before, #{$sel}:active::before {
+      font-size: 12pt;
+      padding: 0rem 0.3rem;
+      visibility: visible;
+      content: $content;
+      text-align: center;
+      font-family: $font;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  padding-bottom: 20px;
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  span.authors {
+    span.internal {
+      font-weight: bold;
+      color: $col-os-green;
+    }
+  }
+  span.venue {
+    font-style: italic;
+  }
+  span.award {
+    font-weight: bold;
+  }
+  span.resources {
+    a, a:visited, a:hover, a:active {
+      color: $col-os-orange;
+    }
+    @include replace-a-icon("a.res-paperpdf", "\f1c1");
+    @include replace-a-icon("a.res-preprint", "\f573");
+    @include replace-a-icon("a.res-video", "\f03d");
+    @include replace-a-icon("a.res-audio", "\f58f");
+    @include replace-a-icon("a.res-artifact", "\f0c3");
+    @include replace-a-icon("a.res-slides", "\f5fd");
+    @include replace-a-icon("a.res-poster", "\f328");
+  }
+}

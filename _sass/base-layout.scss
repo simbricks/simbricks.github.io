@@ -1,0 +1,181 @@
+$width: 850px;
+$max-page-width: 1200px;
+
+section, header, footer {
+  max-width: $max-page-width;
+  margin: 0 auto;
+}
+
+
+/*header#mainheader:before {
+  content: " ";
+  display: block;
+  height: 35px;
+  width: 100%;
+}*/
+
+nav#navbar {
+  margin: 0px;
+  padding: 5px;
+
+  div.navcontainer {
+    width: $width;
+    margin: 0px auto;
+    padding: 5px;
+
+    img#logo {
+      vertical-align: top;
+      height: 3em;
+    }
+ 
+    button#navbutton {
+      display: none;
+    }
+
+    ul.l1 {
+      float: right;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline;
+        padding: 0rem 1rem;
+        line-height: 2;
+      }
+    }
+  }
+}
+
+
+header.page-header {
+  margin-bottom: 40px;
+  div.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+    min-height: 35rem;
+
+    div.text {
+      width: 450px;
+      min-height: 240px;
+      margin-left: 0px;
+      padding-top: 6em;
+      p {
+        margin: 0;
+      }
+      h1 {
+        margin: 0.5rem 0rem;
+      }
+      div.description {
+        margin-top: 10px;
+      }
+    }
+  }
+  div.clear {
+    clear: both;
+  }
+}
+
+div.container {
+  width: $width;
+  margin: 0px auto;
+  padding: 40px 0px;
+}
+
+div.banner {
+  img {
+    width: 100%;
+  }
+}
+
+div.titlebar {
+  div.container {
+    padding: 8px 0px;
+    h2 {
+      margin: 0px;
+    }
+  }
+}
+
+
+
+footer {
+  margin: 0rem auto;
+  padding: 1rem 2rem;
+  text-align: center;
+
+  div.container {
+    padding: 0rem;
+  }
+
+  ul {
+    padding: 0rem;
+    margin: 1rem 0rem;
+    li {
+      display: inline;
+      padding: 0rem 1rem;
+    }
+  }
+}
+
+/* changes for mobile layout */
+@include media-mobile {
+  nav#navbar {
+    border-bottom: none;
+
+    div.navcontainer {
+      width: 100%;
+      padding-left: 15px;
+
+      button#navbutton {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 40px;
+        width: 40px;
+        height: 40px;
+      }
+      ul.l1 {
+        display: none;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+
+        li {
+          width: 100%;
+          text-align: right;
+          display: block;
+        }
+      }
+      ul.l1-active {
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 88px;
+      }
+    }
+  }
+
+  div.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  header.page-header {
+    div.container {
+      text-align: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 0px;
+      height: auto;
+    }
+  }
+
+  div.titlebar {
+    div.container {
+      padding: 8px;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+categories:
+  core:
+    title: Core Team
+    sort_by: order
+    format: full
+  contributor:
+    title: Contributors
+    sort_by: name
+    format: full
+  past_contributor:
+    title: Past Contributors
+    sort_by: year
+    sort_reverse: true
+    format: short
+
+
+people:
+  hejing:
+    name: Hejing Li
+    pronouns: she / her
+    description: PhD @ MPI-SWS
+    img: hejing
+    category: core
+    website: https://hajeongee.github.io/
+
+  antoine:
+    name: Antoine Kaufmann
+    pronouns: he / him
+    description: Faculty @ MPI-SWS
+    img: antoine
+    category: core
+    website: https://antoine.systems/
+
+  jialin:
+    name: Jialin Li
+    pronouns: he / him
+    description: Faculty @ NUS
+    img: jialin
+    category: core
+    website: https://www.comp.nus.edu.sg/~lijl/
+
+  jakob:
+    name: Jakob Görgen
+    pronouns: he / him
+    description: MSc @ Saarland
+    img: jakob
+    category: core
+    website: https://q713.github.io/jgoergen/
+
+  jonas:
+    name: Jonas Kaufmann
+    pronouns: he / him
+    description: MSc @ Saarland, Intern @ MPI-SWS
+    img: jonas
+    category: core
+    website: https://jonas-kaufmann.github.io/
+
+  marvin:
+    name: Marvin Meiers
+    pronouns: he / him
+    description: MSc @ Saarland
+    img: marvin
+    category: core
+    website: https://marvin71.github.io/
+
+
+  gideon:
+    name: Gideon Mohr
+    pronouns: he / him
+    description: MSc Thesis
+    category: contributor
+
+  artemio:
+    name: Artemio Ageev
+    pronouns: he / him
+    description: PhD @ MPI-SWS
+    img: artemio
+    category: contributor
+
+  yiliang:
+    name: Yiliang Wan
+    pronouns: he / him
+    description: MSc @ NUS
+    category: contributor
+
+
+  praneeth:
+    name: Praneeth Balasubramanian
+    pronouns: he / him
+    description: Intern @ NUS
+    category: past_contributor
+    year: 2023
+    website: https://www.linkedin.com/in/praneeth-bala-77374b202/
+
+  bin:
+    name: Bin Gao
+    pronouns: he / him
+    description: PhD @ NUS
+    img: bin
+    category: past_contributor
+    year: 2022
+    website: https://csbingao.github.io/
+
+  zhiqiang:
+    name: Zhiqiang Xie
+    pronouns: he / him
+    description: Intern @ MPI-SWS
+    category: past_contributor
+    year: 2021
+    website: https://zhiqiangxie.com/
+
+  keon:
+    name: Keon Jang
+    pronouns: he / him
+    description: SWE @ Google NetInfra
+    category: past_contributor
+    year: 2021
+    website: https://keonjang.github.io/

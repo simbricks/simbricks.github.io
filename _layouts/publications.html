@@ -1,0 +1,24 @@
+---
+layout: base
+---
+<article class="publications">
+  {%- for ty in site.data.publications.types %}
+  {%- assign typekey = ty[0] %}
+  {%- assign type = ty[1] %}
+  <section>
+    <div class="titlebar">
+      <div class="container">
+        <h2>{{ type.title }}</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="publications">
+      {%- assign publications = site.data.publications.publications |
+        where: 'type', typekey -%}
+      {%- include publist.html -%}
+      </div>
+    </div>
+  </section>
+  {%- endfor -%}
+  
+</article>

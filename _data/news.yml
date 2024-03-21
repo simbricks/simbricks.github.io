@@ -1,0 +1,69 @@
+news:
+  - date: 2023-10-25
+    title: AC/DSim wins 3rd at SOSP'23 SRC
+    text: |
+      Jonas won third place at the [SOSP'23 student research competition](
+      https://sosp2023.mpi-sws.org/cfsrc.html) with AC/DSim.
+
+  - date: 2023-09-13
+    title: AC/DSim poster at SOSP'23 SRC
+    text: |
+      Jonas' submission on full system energy estimation with modular
+      simulation has passed stage 1 of the [SOSP'23 student research
+      competition](https://sosp2023.mpi-sws.org/cfsrc.html).
+
+  - date: 2023-05-09
+    title: Simics integrated into SimBricks
+    text: |
+      Jonas successfully implemented SimBricks adapters in the [Simics](
+      https://www.intel.com/content/www/us/en/developer/articles/tool/simics-simulator.html)
+      simulator for the PCI and memory protocols and we now merged this into our
+      main branch.
+
+  - date: 2023-02-23
+    title: SplitSim accepted at YArch'23
+    text: |
+      Hejing will present her ongoing work on parallelizing sequential
+      simulators through decomposition at [YArch'23](
+      https://web.mit.edu/yarch2023/index.html).
+
+  - date: 2023-02-14
+    title: Memory Disaggregation in SimBricks
+    text: |
+      We merged initial support for [simulating disaggregated memory](
+      https://github.com/simbricks/simbricks/pull/57) systems into our main
+      branch.
+
+  - date: 2023-01-27
+    title: Welcome Marvin
+    text: |
+      Marvin joined the project for his MSc thesis.
+
+  - date: 2022-11-18
+    title: Presented at WORDS'22
+    text: |
+      Bin showcased [SimBricks for disaggregated systems research](
+      https://simbricks.github.io/documents/22words_simbricks-disagg.pdf) at
+      WORDS'22. Here is [a video](https://www.youtube.com/watch?v=F9kO_YSnkCQ).
+
+  - date: 2023-10-18
+    title: Welcome Jakob
+    text: |
+      Jakob joined the project for his MSc thesis.
+
+  - date: 2022-08-24
+    title: Presented at SIGCOMM'22.
+    text: |
+      Hejing presented SimBricks at SIGCOMM'22 in Amsterdam. Here is [a video](
+      https://www.youtube.com/watch?v=fSIcPuuI6kk) of the presentation.
+
+  - date: 2022-06-29
+    title: Artifact Evaluation Passed
+    text: |
+      Our SIGCOMM'22 paper received all three artifact evaluation badges:
+      available, functional, and reproduced.
+
+  - date: 2022-05-07
+    title: Paper Accepted at SIGCOMM'22
+    text: |
+      Our SimBricks paper will appear at SIGCOMM'22 in Amsterdam!

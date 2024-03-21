@@ -1,0 +1,249 @@
+$col-os-grey: hsl(90, 1%, 32%) !default;
+$col-os-green: hsl(58, 50%, 51%) !default;
+$col-os-orange: hsl(23, 85%, 62%) !default;
+$col-os-purple: hsl(290, 30%, 44%) !default;
+$col-os-teal: hsl(173, 55%, 55%) !default;
+$col-os-pink: hsl(341, 61%, 64%) !default;
+
+$col-sb-blu:    hsl(185, 100%, 32%) !default;
+$col-sb-blu-l1: hsl(185, 100%, 38%) !default;
+$col-sb-blu-l2: hsl(185, 100%, 44%) !default;
+$col-sb-blu-d1: hsl(185, 100%, 26%) !default;
+$col-sb-blu-d2: hsl(185, 100%, 20%) !default;
+$col-sb-blu-d3: hsl(185, 100%, 14%) !default;
+
+$col-sb-org:    hsl(18, 89%, 57%) !default;
+$col-sb-org-l1: hsl(18, 89%, 63%) !default;
+$col-sb-org-l2: hsl(18, 89%, 69%) !default;
+$col-sb-org-l3: hsl(18, 89%, 75%) !default;
+$col-sb-org-d1: hsl(18, 89%, 51%) !default;
+$col-sb-org-d2: hsl(18, 89%, 45%) !default;
+$col-sb-org-d3: hsl(18, 89%, 39%) !default;
+
+$col-sb-gre:    hsl(77, 58%, 44%) !default;
+$col-sb-gre_l1: hsl(77, 58%, 50%) !default;
+$col-sb-gre_l2: hsl(77, 58%, 56%) !default;
+$col-sb-gre_l3: hsl(77, 58%, 62%) !default;
+$col-sb-gre_d1: hsl(77, 58%, 38%) !default;
+$col-sb-gre_d2: hsl(77, 58%, 32%) !default;
+$col-sb-gre_d3: hsl(77, 58%, 26%) !default;
+
+$font-title: 'Exo 2', sans-serif;
+$font-main: 'Alegreya Sans', sans-serif;
+$font-fa: 'Font Awesome 6 Free';
+$font-fab: 'Font Awesome 6 Brands';
+
+html {
+  background-color: white;
+}
+
+body {
+  font-family: $font-main;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: $font-title;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 2rem;
+  /*text-transform: uppercase;*/
+}
+
+a, a:visited, a:hover, a:active {
+  color: $col-os-orange;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@mixin sec-green {
+  background-color: $col-sb-gre;
+  color: white;
+}
+
+@mixin sec-white {
+  background-color: white;
+}
+
+@mixin sec-grey {
+  background-color: $col-os-grey;
+  color: white;
+}
+
+@mixin sec-orange {
+  background-color: $col-sb-org;
+  color: white;
+}
+
+@mixin sec-blue {
+  background-color: $col-sb-blu;
+  color: white;
+}
+section {
+  @include sec-white;
+}
+
+/*header#mainheader:before {
+  background-color: $col-os-grey;
+}*/
+
+nav#navbar {
+  background-color: white;
+  color: white;
+
+  div.navcontainer {
+    border-bottom: 1px white solid;
+
+    a, a:visited, a:hover, a:active {
+      color: inherit;
+      font-weight: normal;
+    }
+
+    a.brand {
+      font-size: 1.8rem;
+      font-family: $font-title;
+      font-weight: 300;
+      padding-left: 0.5rem;
+      line-height: 1.4;
+      color: black;
+    }
+
+    button#navbutton {
+      background-color: white;
+      color: $col-os-green;
+      border: none;
+      border-radius: 50%;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    ul.l1 {
+      li {
+        color: #ccc;
+        font-weight: 400;
+        font-family: $font-title;
+        text-transform: uppercase;
+        line-height: 3;
+      }
+
+      li.current {
+        a, a:visited, a:hover, a:active {
+          font-weight: 600;
+          color: $col-sb-org;
+        }
+      }
+    }
+  }
+}
+
+
+header.page-header {
+  background-image: url('/assets/images/bricks_tumbling_outline.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  @include sec-grey;
+  div.container {
+    div.text {
+      p.subtitle {
+        font-family: $font-title;
+        font-size: 1.5rem;
+        text-align: right;
+        padding-top: 3rem;
+        padding-right: 0rem;
+        padding-left: 5rem;
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: 200;
+      }
+      div.description {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+header.page-header-green {
+  @include sec-green;
+}
+
+header.page-header-orange {
+  @include sec-orange;
+}
+
+header.page-header-blue {
+  @include sec-blue;
+}
+
+
+div.titlebar {
+  background-color: $col-os-green;
+  color: white;
+  div.container {
+    h2 {
+      font-weight: normal;
+      font-size: 2rem;
+    }
+  }
+}
+
+
+
+footer {
+  @include sec-orange;
+  ul {
+    list-style: none;
+
+    li {
+      a, a:active {
+        color: white;
+        text-decoration: none;
+      }
+      a::before, a:active::before {
+        font-size: 2rem;
+        display: inline-block;
+
+        content: "";
+        text-align: center;
+        font-family: $font-fab;
+        font-weight: bold;
+      }
+
+      a.slack::before {
+        content: "\f198";
+      }
+      a.github::before {
+        content: "\f09b";
+      }
+      a.twitter::before {
+        content: "\f099";
+      }
+    }
+  }
+}
+
+/* a few design changes for mobile too */
+@include media-mobile {
+  nav#navbar {
+    div.navcontainer {
+      ul.l1 {
+        color: $col-os-grey;
+        background-color: white;
+        font-size: 1.5em;
+
+        li {
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

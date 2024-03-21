@@ -1,0 +1,24 @@
+<div class="project-block {{ include.class }}">
+  <div class="people">
+    {% for st in project.people %}
+      {%- assign person = site.data.people.people[st] %}
+      {% include person-img.html %}
+    {% endfor %}
+  </div>
+  <div class="logo">
+    {%- if project.logo -%}
+    <img class="logo" src="/assets/images/{{ project.logo }}"
+      alt="{{ project.title }} Logo" title="{{ project.title }}">
+    {%- else -%}
+    <img class="logo" src="/assets/images/projects/placeholder.svg"
+    alt="{{ project.title }} Placeholder Logo" title="{{ project.title }}">
+    {%- endif -%}
+  </div>
+  <div class="description">
+    <h3>{{ project.title }}</h3>
+    {{ project.description | markdownify }}
+  </div>
+  <div class="link">
+    <a href="{{ project.url | relative_url }}">Learn More</a>
+  </div>
+</div>

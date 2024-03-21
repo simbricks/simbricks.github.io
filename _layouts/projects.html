@@ -1,0 +1,25 @@
+---
+layout: base
+---
+<article class="projects">
+  {%- assign projects = site.projects
+      | where: 'parent', nil
+      | sort: 'order'
+      | reverse -%}
+  {% for project in projects %}
+  <section class="{% cycle 'odd', 'even' %}"">
+    <div class="container">
+      {% include project-block.html class="top" %}
+      <div class="subprojects">
+        {%- assign subprojects = site.projects
+            | where: 'parent', project.slug
+            | sort: 'order'
+            | reverse -%}
+        {% for project in subprojects %}
+        {% include project-block.html class="sub" %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+</article>
