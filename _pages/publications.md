@@ -6,4 +6,6 @@ subtitle: "Papers about SimBricks and papers using SimBricks"
 permalink: /publications.html
 ---
 
-We are some goofy goobers.
+# SimBricks in your Work
+
+If you use SimBricks in your work, please cite the SIGCOMM'22 paper above. Please also let us know if you publish work that extends or uses SimBricks and we will happily add it to this page.

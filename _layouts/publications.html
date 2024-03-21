@@ -6,12 +6,8 @@ layout: base
   {%- assign typekey = ty[0] %}
   {%- assign type = ty[1] %}
   <section>
-    <div class="titlebar">
-      <div class="container">
-        <h2>{{ type.title }}</h2>
-      </div>
-    </div>
     <div class="container">
+      <h2>{{ type.title }}</h2>
       <div class="publications">
       {%- assign publications = site.data.publications.publications |
         where: 'type', typekey -%}
@@ -21,4 +17,9 @@ layout: base
   </section>
   {%- endfor -%}
   
+  <section class="call">
+    <div class="container">
+      {{ content }}
+    </div>
+  </section>
 </article>

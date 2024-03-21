@@ -1,79 +1,45 @@
 types:
-  inprogress:
-    title: In Progress
+  simbricks:
+    title: SimBricks Publications
     prefix: ""
 
-  conference:
-    title: Conference
-    prefix: "In "
-
-  workshop:
-    title: Workshop
-    prefix: "In "
-
-  techreport:
-    title: Tech Reports
-    prefix: "In "
-
-  poster:
-    title: Posters
-    prefix: "In "
-
-restypes:
-  paperpdf:
-    label: Paper PDF
-
-  preprint:
-    label: Preprint
-
-  slides:
-    label: Slides
-
-  video:
-    label: Video
-
-  audio:
-    label: Audio
-
-  poster:
-    label: Poster
-
-  artifact:
-    label: Artifact
+  users:
+    title: Publications using SimBricks
+    prefix: ""
 
 
 publications:
-  virtuoso:
-    type: inprogress
+  splitsim:
+    type: simbricks
     title: |
-      Virtuoso: High Resource Utilization and μs-scale Performance Isolation in
-      a Shared Virtual Machine TCP Network Stack
+      SplitSim: Large-Scale Simulations for Evaluating Network Systems Research
     authors:
-      - internal: matheus
-      - internal: liam
-      - external: Simon Peter
+      - internal: hejing
+      - external: Praneeth Balasubramanian
+      - internal: marvin
+      - external: Jialin Li
       - internal: antoine
-    venue: Under submission
-    year: 2023
+    venue: Preprint (arXiv)
+    year: 2024
     people:
-      - matheus
-      - liam
+      - hejing
+      - marvin
       - antoine
     projects:
-      - virtuoso
+      - splitsim
     resources:
       - type: preprint
-        external: https://arxiv.org/abs/2309.14016
+        external: https://arxiv.org/abs/2402.05312
 
   kugelblitz:
-    type: inprogress
+    type: users
     title: |
       Kugelblitz: Streamlining Reconfigurable Packet Processing Pipeline Design
       and Evaluation
     authors:
       - internal: artemio
       - internal: antoine
-    venue: Under Submission
+    venue: Preprint (arXiv)
     year: 2023
     people:
       - artemio
@@ -84,45 +50,8 @@ publications:
       - type: preprint
         external: https://arxiv.org/abs/2305.08435
 
-  cygnus:
-    type: inprogress
-    title: |
-      Protected Data Plane OS Using Memory Protection Keys and Lightweight
-      Activation
-    authors:
-      - external: Yihan Yang
-      - external: Zhuobin Huang
-      - internal: antoine
-      - external: Jialin Li
-    venue: Under Submission
-    year: 2023
-    people:
-      - antoine
-    resources:
-      - type: preprint
-        external: https://arxiv.org/abs/2302.14417
-
-  virtuoso_src:
-    type: poster
-    title: |
-      Virtuoso TCP Stack: Squashing Isolation and Resource Efficiency Tradeoffs
-      in Virtualized Environments
-    authors:
-      - internal: matheus
-    venue: ACM Student Research Competition @ SOSP 2023
-    year: 2023
-    people:
-      - matheus
-    projects:
-      - virtuoso
-    awards:
-      - First Place in Graduate Category
-    resources:
-      - type: poster
-        internal: virtuoso_src_2023.pdf
-
   acdsim_src:
-    type: poster
+    type: simbricks
     title: |
       AC/DSim: Full System Energy Estimation with Modular Simulation
     authors:
@@ -139,34 +68,8 @@ publications:
       - type: poster
         internal: acdsim_src_2023.pdf
 
-
-  blueprint:
-    type: conference
-    title: |
-      Blueprint: A Toolchain for Highly-Reconfigurable Microservice Applications
-    authors:
-      - internal: vaastav
-      - external: Deepak Garg
-      - internal: antoine
-      - external: Jonathan Mace
-    venue: 29th ACM Symposium on Operating Systems Principles
-    series: SOSP
-    year: 2023
-    month: 10
-    location: Koblenz, Germany
-    people:
-      - vaastav
-      - antoine
-    projects:
-      - blueprint
-    resources:
-      - type: paperpdf
-        external: https://vaastavanand.com/assets/pdf/anand2023blueprint.pdf
-      - type: artifact
-        external: https://gitlab.mpi-sws.org/cld/blueprint/blueprint-sosp23-experiments
-
   splitsim_yarch:
-    type: workshop
+    type: simbricks
     title: |
       SplitSim: Scalable and Parallel Full Data Center System Simulations
     authors:
@@ -190,7 +93,7 @@ publications:
         external: https://www.youtube.com/watch?v=TXZT-4uQxkg
 
   memdisagg_sim:
-    type: workshop
+    type: simbricks
     title: |
       Improving Disaggregated System Evaluation with Modular End-to-End
       Simulation
@@ -218,7 +121,7 @@ publications:
         external: https://simbricks.github.io/documents/22words_simbricks-disagg_slides.pdf
 
   simbricks:
-    type: conference
+    type: simbricks
     title: |
       SimBricks: End-to-End Network System Evaluation with Modular Simulation
     authors:
@@ -245,61 +148,8 @@ publications:
       - type: artifact
         external: https://github.com/simbricks/sigcomm22-artifact
 
-  energy_tracing:
-    type: workshop
-    title: |
-      The Odd One Out: Energy is not like Other Metrics
-    authors:
-      - internal: vaastav
-      - external: Zhiqiang Xie
-      - internal: matheus
-      - external: Roberta De Viti
-      - external: Thomas Davidson
-      - external: Reyahneh Karimipour
-      - external: Safya Alzayat
-      - external: Jonathan Mace
-    venue: 1st Workshop on Sustainable Computer Systems Design and Implementation
-    series: HotCarbon
-    year: 2022
-    month: 7
-    location: La Jolla, USA
-    people:
-      - vaastav
-      - matheus
-    resources:
-      - type: paperpdf
-        external: https://vaastavanand.com/assets/pdf/hotcarbon22-anand.pdf
-      - type: video
-        external: https://youtu.be/3EWmqhah7Rs
-
-  flextoe:
-    type: conference
-    title: |
-      FlexTOE: Flexible TCP Offload with Fine-Grained Parallelism
-    authors:
-      - external: Rajath Shashidhara
-      - external: Timothy Stamler
-      - internal: antoine
-      - external: Simon Peter
-    venue: 19th USENIX Symposium on Networked Systems Design and Implementation
-    series: NSDI
-    year: 2022
-    month: 4
-    location: Renton, WA, USA
-    people:
-      - antoine
-    projects:
-      - tas
-    resources:
-      - type: paperpdf
-        external: https://www.usenix.org/system/files/nsdi22-paper-shashidhara.pdf
-      - type: video
-        external: https://www.youtube.com/watch?v=0sRLk2zNrdE
-      - type: slides
-        external: https://www.usenix.org/system/files/nsdi22_slides_shashidhara.pdf
-
   kugelblitz_ws:
-    type: workshop
+    type: users
     title: |
       Exploring Domain-Specific Architectures for Network Protocol Processing
     authors:
@@ -321,110 +171,3 @@ publications:
         external: https://people.mpi-sws.org/~antoinek/documents/21microcloud_kugelblitz.pdf
       - type: video
         external: https://www.youtube.com/watch?v=5bUEibxxURw&t=1h31m56s
-
-  clockwork:
-    type: conference
-    title: |
-      Serving DNNs like Clockwork: Performance Predictability from the Bottom Up
-    authors:
-      - external: Arpan Gujarati
-      - external: Reza Karimi
-      - external: Safya Alzayat
-      - internal: antoine
-      - external: Ymir Vigfusson
-      - external: Jonathan Mace
-    venue: 14th Symposium on Operating Systems Design and Implementation
-    series: OSDI
-    year: 2020
-    month: 11
-    location: Banff, Canada
-    awards:
-      - Distinguished Artifact Award
-    people:
-      - antoine
-    resources:
-      - type: paperpdf
-        external: https://www.usenix.org/system/files/osdi20-gujarati.pdf
-      - type: video
-        external: https://www.youtube.com/watch?v=wHOpY_MY57Y
-      - type: slides
-        external: https://www.usenix.org/sites/default/files/conference/protected-files/osdi20_slides_gujarati.pdf
-      - type: artifact
-        external: https://gitlab.mpi-sws.org/cld/ml/clockwork
-
-  tas:
-    type: conference
-    title: |
-      TCP Acceleration as an OS Service
-    authors:
-      - internal: antoine
-      - external: Tim Stamler
-      - external: Simon Peter
-      - external: Naveen Kr. Sharma
-      - external: Thomas Anderson
-      - external: Arvind Krishnamurthy
-    venue: 14th EuroSys Conference
-    series: EuroSys
-    year: 2019
-    month: 3
-    location: Dresden, Germany
-    people:
-      - antoine
-    projects:
-      - tas
-    resources:
-      - type: paperpdf
-        external: https://people.mpi-sws.org/~antoinek/documents/19eurosys_tas.pdf
-      - type: video
-        external: https://se.inf.tu-dresden.de/eurosys2019/Video/27_3/Antoine%20Kaufmann.mov
-      - type: slides
-        external: https://tcp-acceleration-service.github.io/documents/tas_slides.pptx
-      - type: artifact
-        external: https://github.com/tcp-acceleration-service/tas
-
-  multitenant_dnn:
-    type: techreport
-    title: |
-      No DNN Left Behind: Improving Inference in the Cloud with Multi-Tenancy
-    authors:
-      - external: Amit Samanta
-      - external: Suhas Shrinivasan
-      - internal: antoine
-      - external: Jonathan Mace
-    venue: arXiv
-    year: 2019
-    month: 1
-    people:
-      - antoine
-    resources:
-      - type: preprint
-        external: https://arxiv.org/abs/1901.06887
-
-  floem:
-    type: conference
-    title: |
-      Floem: Language, Compiler, and Runtime for Network Applications on
-      Heterogeneous Systems
-    authors:
-      - external: Phitchaya Mangpo Phothilimthana
-      - external: Ming Liu
-      - internal: antoine
-      - external: Simon Peter
-      - external: Rastislav Bodik
-      - external: Thomas Anderson
-    venue: 13th Symposium on Operating Systems Design and Implementation
-    series: OSDI
-    year: 2018
-    month: 10
-    location: Carlsbad, CA, USA
-    people:
-      - antoine
-    resources:
-      - type: paperpdf
-        external: https://www.usenix.org/system/files/osdi18-phothilimthana.pdf
-      - type: audio
-        external: https://2459d6dc103cb5933875-c0245c5c937c5dedcca3f1764ecc9b2f.ssl.cf2.rackcdn.com/osdi18/phothilimthana.mp3
-      - type: slides
-        external: https://www.usenix.org/sites/default/files/conference/protected-files/osdi18_slides_phothilimthana.pdf
-      - type: artifact
-        external: https://github.com/mangpo/floem

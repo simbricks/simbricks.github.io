@@ -1,3 +1,9 @@
+article.publications {
+  section.call {
+    @include sec-green;
+  }
+}
+
 div.publist {
   @mixin replace-a-icon($sel, $content, $font: $font-fa) {
     #{$sel}, #{$sel}:active {
@@ -22,12 +28,12 @@ div.publist {
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  span.authors {
+  /*span.authors {
     span.internal {
       font-weight: bold;
       color: $col-os-green;
     }
-  }
+  }*/
   span.venue {
     font-style: italic;
   }
