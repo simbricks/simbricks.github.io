@@ -106,6 +106,10 @@ nav#navbar {
       font-weight: normal;
     }
 
+    a:hover {
+      color: $col-sb-org;
+    }
+
     a.brand {
       font-size: 1.8rem;
       font-family: $font-title;
