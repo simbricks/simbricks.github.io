@@ -26,13 +26,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: 3.3
+          bundler-cache: true
+      - run: bundle install
+      - run: bundle exec jekyll build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
