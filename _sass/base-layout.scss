@@ -67,8 +67,11 @@ header.page-header {
       h1 {
         margin: 0.5rem 0rem;
       }
-      div.description {
-        margin-top: 10px;
+      p.subtitle {
+        text-align: right;
+        padding-top: 3rem;
+        padding-right: 0rem;
+        padding-left: 5rem;
       }
     }
   }
@@ -170,6 +173,14 @@ footer {
       justify-content: center;
       padding-bottom: 0px;
       height: auto;
+
+      div.text {
+        p.subtitle {
+          text-align: center;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
     }
   }
 
