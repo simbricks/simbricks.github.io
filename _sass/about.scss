@@ -57,10 +57,10 @@ body.about {
       li {
         margin-left: 2rem;
         padding: 2rem 0.5rem;
-        line-height: 0.3;
       }
 
       li::before {
+        position: absolute;
         content: "";
         text-align: center;
         font-family: $font-fa;
@@ -70,7 +70,7 @@ body.about {
         margin-left: -5rem;
         font-weight: bold;
         font-size: 2rem;
-        vertical-align: -1rem;
+        padding-top: 0.5rem;
         line-height: 1rem;
       }
 
