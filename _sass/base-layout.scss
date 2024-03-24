@@ -54,6 +54,7 @@ header.page-header {
     justify-content: space-between;
     align-items: center;
     padding: 40px 0px;
+    min-height: 20rem;
 
     div.logo {
       float: left;
@@ -71,7 +72,8 @@ header.page-header {
       width: 450px;
       min-height: 240px;
       margin-left: 0px;
-      padding-top: 6em;
+      padding-top: 2em;
+      padding-bottom: 2em;
       p {
         margin: 0;
       }
@@ -80,9 +82,9 @@ header.page-header {
       }
       p.subtitle {
         text-align: right;
-        padding-top: 3rem;
+        padding-top: 2rem;
         padding-right: 0rem;
-        padding-left: 5rem;
+        padding-left: 4rem;
       }
     }
   }

@@ -162,7 +162,6 @@ header.page-header {
       }
       h1 {
         font-size: 3rem;
-        font-weight: 300;
       }
       div.description {
         font-size: 1.2rem;
@@ -185,8 +184,7 @@ header.page-header-blue {
 
 
 div.titlebar {
-  background-color: $col-os-green;
-  color: white;
+  @include sec-green;
   div.container {
     h2 {
       font-weight: normal;
