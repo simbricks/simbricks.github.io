@@ -1,0 +1,9 @@
+body.project {
+  header.page-header {
+    @include sec-grey;
+  }
+
+  div.titlebar{
+    @include sec-blue;
+  }
+}

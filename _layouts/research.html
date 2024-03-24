@@ -1,0 +1,52 @@
+---
+layout: base
+---
+<article class="research">
+  {%- assign projects = site.projects
+  | where: 'parent', nil
+  | sort: 'order'
+  | reverse -%}
+  <section>
+    <div class="titlebar">
+      <div class="container">
+        <h2>Active Projects</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="projects">
+        {%- assign subprojects = site.projects
+        | where: 'parent', project.slug
+        | sort: 'order'
+        | reverse -%}
+        {% for project in projects %}
+        {% include project-block.html class="sub" %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {%- for ty in site.data.publications.types %}
+  {%- assign typekey = ty[0] %}
+  {%- assign type = ty[1] %}
+  <section>
+    <div class="titlebar">
+      <div class="container">
+        <h2>{{ type.title }}</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class=" publications">
+        {%- assign publications = site.data.publications.publications |
+        where: 'type', typekey -%}
+        {%- include publist.html -%}
+      </div>
+    </div>
+  </section>
+  {%- endfor -%}
+
+  <section class="call">
+    <div class="container">
+      {{ content }}
+    </div>
+  </section>
+</article>

@@ -3,7 +3,6 @@ title: Columbo
 logo: projects/columbo.svg
 people:
   - jakob
-parent: simbricks
 description: |
   Low-Level End-to-End System-Traces through SimBricks Simulations.
 ---
