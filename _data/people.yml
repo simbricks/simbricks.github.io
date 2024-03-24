@@ -83,6 +83,14 @@ people:
     description: MSc @ NUS
     category: contributor
 
+  jiacheng:
+    name: Jiacheng Ma
+    pronouns: he / him
+    description: PhD @ EPFL
+    img: jiacheng
+    category: contributor
+    website: https://people.epfl.ch/jiacheng.ma
+
 
   praneeth:
     name: Praneeth Balasubramanian
