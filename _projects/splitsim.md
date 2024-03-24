@@ -14,5 +14,5 @@ framework SplitSim. Motivated by SimBricks, SplitSim provides a method to
 systematically decompose a large instance of simulation into several pieces and
 run them in parallel, while safeguarding accurate timing. What’s more, it is
 flexible in terms of deciding the number and the scope of divided pieces. We are
-adopting SplitSim to several representative simulators, including NS3 and Gem5,
+adopting SplitSim to several representative simulators, including ns-3 and gem5,
 in the network area and computer architecture area respectively.
