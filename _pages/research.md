@@ -2,7 +2,7 @@
 layout: research
 header_color: blue
 title: "Research"
-subtitle: "Active projects, papers about and papers using SimBricks"
+subtitle: "On-going projects, papers about and publications using SimBricks"
 permalink: /research.html
 ---
 
