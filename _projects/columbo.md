@@ -4,27 +4,29 @@ logo: projects/columbo.svg
 people:
   - jakob
 description: |
-  Low-Level End-to-End System-Traces through SimBricks Simulations.
+  Interpretable, end-to-end system traces from SimBricks simulations
 ---
 
 Simulation can provide almost arbitrary deep visibility into what a simulated
-system does **without affecting** the simulated systems behaviour at all.
-Additionally do most simulators provide the capabilities to write detailed log
-files. 
-The goal of [Columbo](https://github.com/q713/simbricks/tree/log-analysis) 
-will be to add library support to SimBricks that allows users to easily write small programs to
-obtain **Low-Level End-to-End System Traces** of SimBricks simulations by
-harnessing the log files that are written by the simulators involved in a
-simulation. 
-To achieve this the log files are combined and converted into
-already existing formats known from distributed tracing: Events, Spans, Traces.
-This will be useful tooling for people using SimBricks as it will help to easily
-answer questions like what was the average end-to-end latency within a
-simulation and how was this latency distributed across individual components or
-why did RPC X take Z ms longer than RPC Y. In more detail are the individual log
-files parsed to obtain Events that will be packed together to Event-Spans for
-each simulator respectively. These event spans will then be causally connected
-to each other to form a distributed trace. To benefit from this, existing tools
-from the distributed tracing community (like
-[Jaeger](https://www.jaegertracing.io/)) are used to visualize and query the
-resulting traces. 
+system does *without affecting* the simulated system's behavior. Additionally,
+most simulators provide the capability to produce highly detailed log files.
+[Columbo](https://github.com/q713/simbricks/tree/log-analysis) adds library
+support to SimBricks enabling users to write small programs to obtain a
+*low-level* and fully *end-to-end* system trace from the log files that are
+produced by the individual component simulators.
+
+In this work, we heavily draw from the area of distributed tracing. We combine
+the individual log files by converting them into commonly-known concepts like
+Events, Spans, and Traces. This allows us to make use of distributed tracing
+tooling to easily answer questions like what the average end-to-end latency
+within a simulation is and how this latency can be attributed to the individual
+components involved. This then, for example, helps explain why RPC X took Z ms
+longer than RPC Y.
+
+In more technical detail, we first parse the individual log files to obtain
+Events. We then combine these into per-simulator Event Spans. Finally, we
+causally connect the per-simulator Event Spans, i.e. we connect the Event Spans
+in component X the caused a span of events in component Y. This forms the
+distributed trace. Finally, we make use of existing tools from the distributed
+tracing community like [Jaeger](https://www.jaegertracing.io) to visualize and
+query the data for analysis.
