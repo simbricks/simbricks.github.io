@@ -18,21 +18,25 @@ body.about {
 
     div.container {
       display: flex;
+      flex-wrap: wrap;
       gap: 2rem;
 
-      div.research-text {
-        width: 40%;
-      }
-      div.research-figure {
-        width: 60%;
-        display: flex;
-        justify-content: center;
-        vertical-align: middle;
-
+      div {
+        min-width: 34%;
         img {
           width: 100%;
-          /*max-width: 400px;*/
+          padding-top: 2rem;
         }
+      }
+
+      div.block-40 {
+        flex: 0.8;
+      }
+      div.block-50 {
+        flex: 1;
+      }
+      div.block-60 {
+        flex: 1.2;
       }
 
 
