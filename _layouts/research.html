@@ -3,7 +3,6 @@ layout: base
 ---
 <article class="research">
   {%- assign projects = site.projects
-  | where: 'parent', nil
   | sort: 'order'
   | reverse -%}
   <section>

@@ -1,0 +1,10 @@
+article.use-cases {
+  section.call {
+    div.container {
+      h2.titlebar {
+        @include sec-blue;
+        padding: 8px;
+      }
+    }
+  }
+}
