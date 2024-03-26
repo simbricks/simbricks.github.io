@@ -10,16 +10,17 @@ permalink: /
 ---
 
 {::options parse_block_html="true" /}
-<div class="block-40">
+<div class="block-50">
 
-## Late Full-System Evaluation Slows Heterogenous System Development
-Heterogeneous hardware-software systems are complex, slow, and expensive to
-build, in academia and industry alike. These systems aim to drastically improve
-performance and energy efficiency of the *complete system* or application.
-However, engineers can only measure overall system performance once all software
-and hardware components have been implemented and manufactured. As a result, key
-metrics for evaluating design and implementation are available only late in
-the project lifecycle, once a physical testbed can be built fully.
+## What is SimBricks?
+SimBricks is an open-source simulation framework that enables full end-to-end
+evaluation of modern heterogeneous systems in simulation. Our primary aim is to
+to enable rapid prototyping and meaningful performance evaluation. SimBricks
+modularly combines and connects battle-tested simulators for different
+components: machines (e.g. QEMU, gem5, Simics), hardware components (e.g.
+Verilator, Tofino, FEMU SSD), and networks (e.g. ns-3, OMNeT++). SimBricks
+simulations run unmodified full system stacks, including applications, operating
+systems such as Linux, and hardware RTL.
 
 </div>
 
@@ -34,19 +35,17 @@ the project lifecycle, once a physical testbed can be built fully.
 </figure>
 </div>
 
-
 {::options parse_block_html="true" /}
 <div class="block-50">
 
-## Early & Consistent Full-System Results Accelerate Development
-
-Enabling developers to run and measure the complete system early speeds up and
-reduces risk for building heterogeneous systems. Developers can choose optimal
-design parameters before implementation based on reliable metrics. Full system
-hardware implementation integration tests reduce the need for extensive
-testbenches. Once hardware implementation is complete, a reliable full system
-performance evaluation before manufacturing provides early feedback to
-developers, reviewers, and customers.
+## Late Full-System Evaluation Slows Development
+Heterogeneous hardware-software systems are complex, slow, and expensive to
+build, in academia and industry alike. These systems aim to drastically improve
+performance and energy efficiency of the *complete* system or application.
+However, engineers can only measure overall system performance once all software
+and hardware components have been implemented and manufactured. As a result, key
+metrics for evaluating design and implementation are only available late in the
+project lifecycle, once a physical testbed can actually be fully built.
 
 </div>
 
@@ -54,15 +53,31 @@ developers, reviewers, and customers.
 {::options parse_block_html="true" /}
 <div class="block-50">
 
-## Modular Simulation can Enable Early Evaluation for Full Heterogeneous Systems
+## Reasons for Early & Continuous Evaluation during Development
 
-Simulation generally enable early evaluation when physical implementation is out
-of reach. However, typical heterogeneous systems require a broad range of
+Enabling developers to run and measure the full system early speeds up and
+reduces risks for building heterogeneous systems. Developers can choose optimal
+design parameters before implementation based on reliable metrics. Full-system
+integration tests reduce the need for extensive hardware testbenches that merely
+emulate the real behavior. Once the hardware implementation is complete, a
+reliable full-system performance evaluation before manufacturing provides early
+feedback to developers, reviewers, and customers.
+
+</div>
+
+
+{::options parse_block_html="true" /}
+<div class="block-50">
+
+## Modular Simulation Enables Early and Continuous Evaluation
+
+Simulation generally enables early evaluation when a physical implementation is
+out of reach. However, typical heterogeneous systems require a broad range of
 components not supported by any individual simulator. To address this, we take a
-modular approach of combining different best-of-breed simulators for different
-components. We flexibly connect and synchronize multiple parallel instances of
-these simulators into a broad range of complete, simulated "end-to-end"
-full-system testbeds.
+modular approach of combining different best-of-breed simulators for the
+individual components. We flexibly connect and synchronize multiple parallel
+instances of these simulators into a broad range of complete, *end-to-end*
+virtual testbeds.
 </div>
 
 
@@ -79,20 +94,4 @@ full-system testbeds.
         connected through a network simulated in ns-3.">
 <figcaption>Simulating the heterogenous system with SimBricks.</figcaption>
 </figure>
-</div>
-
-
-{::options parse_block_html="true" /}
-<div class="block-40">
-
-## SimBricks
-SimBricks is an open-source simulation framework that enables full end-to-end
-evaluation of modern heterogeneous systems in simulation. Our primary aim is to
-to enable  rapid prototyping to meaningful performance evaluation. SimBricks
-modularly combines and connects multiple battle-tested simulators for different
-components: machines (e.g. QEMU, gem5, Simics), hardware components (e.g.
-Verilator, Tofino, FEMU SSD), and networks (e.g. ns-3, OMNeT++). SimBricks
-simulations run unmodified full system stacks, including applications,
-operating systems such as Linux, and hardware RTL.
-
 </div>
