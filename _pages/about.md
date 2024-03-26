@@ -54,7 +54,7 @@ project lifecycle, once a physical testbed can actually be fully built.
 {::options parse_block_html="true" /}
 <div class="block-50">
 
-## Early & Continuous Full-System Results Accelerates Building Heterogeneous Systems
+## Early & Continuous Full-System Results Accelerate Building Heterogeneous Systems
 
 Enabling developers to run and measure the full system early speeds up and
 reduces risks for building heterogeneous systems. Developers can choose optimal
