@@ -236,4 +236,12 @@ body.about {
       }
     }
   }
+
+  article.about {
+    figcaption {
+      text-align: center;
+      padding-top: 1rem;
+      font-style: italic;
+    }
+  }
 }

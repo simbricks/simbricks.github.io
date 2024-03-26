@@ -23,12 +23,15 @@ the project lifecycle, once a physical testbed can be built fully.
 
 </div>
 
-
+{::options parse_block_html="false" /}
 <div class="block-60">
-<img class="system" src="assets/images/overview_sys.svg"
+<figure>
+<img src="/assets/images/overview_sys.svg"
         alt="Example of a heterogeneous system configuration with three
         hosts, a server with the DPU being built and an SSD and two clients with
-        regular NICs. All hosts are connected to a network of just one switch.">
+        regular NICs. All hosts are connected to a network of just one switch."/>
+<figcaption>A simple, modern heterogeneous system.</figcaption>
+</figure>
 </div>
 
 
@@ -64,14 +67,18 @@ full-system testbeds.
 
 
 
+{::options parse_block_html="false" /}
 <div class="block-60">
-<img class="sim" src="assets/images/overview_sim.svg"
+<figure>
+<img src="/assets/images/overview_sim.svg"
         alt="Example of a SimBricks simulation configuration with three
         simulated hosts, a server and two clients. We simulate the server in
         gem5 and connect to an SSD simulated through FEMU and a Corundum FPGA
         NIC simulated through Verilator. The two clients are simulated in QEMU
         and connect to a PCIe behavioral NIC model. All three hosts are
         connected through a network simulated in ns-3.">
+<figcaption>Simulating the heterogenous system with SimBricks.</figcaption>
+</figure>
 </div>
 
 
