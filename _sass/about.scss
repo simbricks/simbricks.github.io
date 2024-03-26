@@ -23,10 +23,6 @@ body.about {
 
       div {
         min-width: 34%;
-        img {
-          width: 100%;
-          padding-top: 2rem;
-        }
       }
 
       div.block-40 {
@@ -238,10 +234,20 @@ body.about {
   }
 
   article.about {
-    figcaption {
-      text-align: center;
-      padding-top: 1rem;
-      font-style: italic;
+    figure {
+      margin: 0px;
+      padding-top: 2em;
+      padding-bottom: 2em;
+
+      img {
+        width: 100%;
+      }
+
+      figcaption {
+        text-align: center;
+        padding-top: 0.5em;
+        font-style: italic;
+      }
     }
   }
 }
