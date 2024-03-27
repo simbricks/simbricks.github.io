@@ -15,7 +15,7 @@ permalink: /
 ## SimBricks: Full-System Simulation for Heterogeneous Systems
 SimBricks is an open-source simulation framework that enables full end-to-end
 evaluation of modern heterogeneous systems in simulation. Our primary aim is to
-to enable rapid prototyping and meaningful performance evaluation. SimBricks
+enable rapid prototyping and meaningful performance evaluation. SimBricks
 modularly combines and connects battle-tested simulators for different
 components: machines (e.g. QEMU, gem5, Simics), hardware components (e.g.
 Verilator, Tofino, FEMU SSD), and networks (e.g. ns-3, OMNeT++). SimBricks
