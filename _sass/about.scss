@@ -115,7 +115,7 @@ body.about {
 
       li {
         width: $block-size;
-        height: calc($block-size * 0.8);
+        min-height: calc(0.9 * $block-size);
 
         background-color: $col-sb-blu;
 
