@@ -171,3 +171,21 @@ publications:
         external: https://people.mpi-sws.org/~antoinek/documents/21microcloud_kugelblitz.pdf
       - type: video
         external: https://www.youtube.com/watch?v=5bUEibxxURw&t=1h31m56s
+  
+  columbo:
+    type: simbricks
+    title: |
+      Low-Level End-to-End System-Traces through Modular Full System Simulation
+    authors:
+      - internal: jakob
+    venue: MSc thesis
+    year: 2024
+    month: 5
+    location: Saarbrücken, Germany
+    people:
+      - jakob
+    projects:
+      - columbo
+    resources:
+      - type: paperpdf
+        external: https://simbricks.github.io/documents/columbo-thesis.pdf
