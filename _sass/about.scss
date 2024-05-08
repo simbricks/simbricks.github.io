@@ -44,6 +44,12 @@ body.about {
       }
     }
   }
+  section.demo_video {
+    @include sec-green;
+    video {
+      width: 100%;
+    }
+  }
   section.features {
     @include sec-green;
 
