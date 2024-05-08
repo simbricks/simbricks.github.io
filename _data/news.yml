@@ -1,4 +1,11 @@
 news:
+  - date: 2024-05-09
+    title: First official SimBricks release
+    text: |
+      We've released SimBricks! The release includes new and updated ns3 
+      and gem5 versions, plus a whole new repository with usage examples to help 
+      users get started with SimBricks. 
+
   - date: 2023-10-25
     title: AC/DSim wins 3rd at SOSP'23 SRC
     text: |
