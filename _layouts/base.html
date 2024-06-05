@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+    <!-- html meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
     <meta name="author" content="SimBricks Team" />
     <meta charset="utf-8">
+    <meta name="title" content="{{ site.title }}"/>
+    <meta name="description" content="{{ site.description }}" />
+
+    <!-- facebook open graph tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:image" content="{{ site.logo }}" />
+ 
+    <!-- twitter card tags additive with the og: tags -->
+    <meta name="twitter:card" content="SimBricks">
+    <meta name="twitter:domain" value="{{ site.domain }}" />
+    <meta name="twitter:title" value="{{ site.title }}" />
+    <meta name="twitter:description" value="{{ site.description }}" />
+    <meta name="twitter:image" content="{{ site.logo }}" />
+    <meta name="twitter:url" value="{{ site.url }}" />
+
+    <meta name="google-site-verification" content="h8XBiCUDWlwWCJb8NeznrVKI1CDTSnnQuH03ef6Z9Ys" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -11,8 +33,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8cb12f">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="theme-color" content="#ffffff">
 
     <title>
       {%- if page.no_page_title -%}
@@ -25,7 +45,6 @@
     <script src="{{ "/assets/js/jquery-3.7.0.min.js" | relative_url }}">
     </script>
     <script src="{{ "/assets/js/slick.min.js" | relative_url }}"></script>
-    <meta name="google-site-verification" content="h8XBiCUDWlwWCJb8NeznrVKI1CDTSnnQuH03ef6Z9Ys" />
   </head>
   <body
       {%- if layout.body_class %}
