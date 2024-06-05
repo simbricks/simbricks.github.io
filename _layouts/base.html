@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+    <!-- html meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
     <meta name="author" content="SimBricks Team" />
     <meta charset="utf-8">
+    <meta name="title" content="SimBricks - Modular Full-System Simulation"/>
+    <meta name="description" content="SimBricks is an open-source modular simulation framework enabling full end-to-end evaluation of modern heterogeneous systems by combining battle-tested simulators for different system components like machines (e.g. QEMU, gem5, Simics), hardware components (e.g. Verilator, Tofino, FEMU SSD), and networks (e.g. ns-3, OMNeT++). SimBricks is fast, scalable, accurate and deterministically connects and synchronizes simulators while being able to run unmodified full system stacks, including applications, operating systems such as Linux, and hardware RTL." />
+
+    <!-- facebook open graph tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://simbricks.github.io" />
+    <meta property="og:title" content="SimBricks" />
+    <meta property="og:description" content="SimBricks is an open-source modular simulation framework enabling full end-to-end evaluation of modern heterogeneous systems by combining battle-tested simulators for different system components like machines (e.g. QEMU, gem5, Simics), hardware components (e.g. Verilator, Tofino, FEMU SSD), and networks (e.g. ns-3, OMNeT++). SimBricks is fast, scalable, accurate and deterministically connects and synchronizes simulators while being able to run unmodified full system stacks, including applications, operating systems such as Linux, and hardware RTL." />
+    <meta property="og:image" content="https://simbricks.github.io/assets/images/simbricks_logo.svg" />
+ 
+    <!-- twitter card tags additive with the og: tags -->
+    <meta name="twitter:card" content="SimBricks">
+    <meta name="twitter:domain" value="simbricks.github.io" />
+    <meta name="twitter:title" value="SimBricks" />
+    <meta name="twitter:description" value="SimBricks is an open-source modular simulation framework enabling full end-to-end evaluation of modern heterogeneous systems by combining battle-tested simulators for different system components like machines (e.g. QEMU, gem5, Simics), hardware components (e.g. Verilator, Tofino, FEMU SSD), and networks (e.g. ns-3, OMNeT++). SimBricks is fast, scalable, accurate and deterministically connects and synchronizes simulators while being able to run unmodified full system stacks, including applications, operating systems such as Linux, and hardware RTL." />
+    <meta name="twitter:image" content="https://simbricks.github.io/assets/images/simbricks_logo.svg" />
+    <meta name="twitter:url" value="https://simbricks.github.io" />
+
+    <meta name="google-site-verification" content="h8XBiCUDWlwWCJb8NeznrVKI1CDTSnnQuH03ef6Z9Ys" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -11,8 +33,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8cb12f">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="theme-color" content="#ffffff">
 
     <title>
       {%- if page.no_page_title -%}
@@ -25,7 +45,6 @@
     <script src="{{ "/assets/js/jquery-3.7.0.min.js" | relative_url }}">
     </script>
     <script src="{{ "/assets/js/slick.min.js" | relative_url }}"></script>
-    <meta name="google-site-verification" content="h8XBiCUDWlwWCJb8NeznrVKI1CDTSnnQuH03ef6Z9Ys" />
   </head>
   <body
       {%- if layout.body_class %}
