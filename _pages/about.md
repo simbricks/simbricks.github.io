@@ -1,6 +1,6 @@
 ---
 layout: about
-header_color: green
+header_color: bluegradient
 subtitle: |
   Streamlining design, implementation, and evaluation of heterogenous
   systems through modular full system simulation.
