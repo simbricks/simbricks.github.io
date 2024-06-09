@@ -8,9 +8,10 @@ $col-os-pink: hsl(341, 61%, 64%) !default;
 $col-sb-blu:    hsl(185, 100%, 32%) !default;
 $col-sb-blu-l1: hsl(185, 100%, 38%) !default;
 $col-sb-blu-l2: hsl(185, 100%, 44%) !default;
-$col-sb-blu-d1: hsl(185, 100%, 26%) !default;
+$col-sb-blu-d1: hsl(185, 100%, 24%) !default;
 $col-sb-blu-d2: hsl(185, 100%, 20%) !default;
 $col-sb-blu-d3: hsl(185, 100%, 14%) !default;
+
 
 $col-sb-org:    hsl(18, 89%, 57%) !default;
 $col-sb-org-l1: hsl(18, 89%, 63%) !default;
@@ -89,6 +90,12 @@ a, a:hover, a:active {
   background-color: $col-sb-blu;
   color: white;
 }
+
+@mixin sec-bluegradient {
+  background: linear-gradient(to right, $col-sb-blu, $col-sb-blu-d1);
+  color: white;
+}
+
 section {
   @include sec-white;
 }
@@ -183,6 +190,10 @@ header.page-header-orange {
 
 header.page-header-blue {
   @include sec-blue;
+}
+
+header.page-header-bluegradient {
+  @include sec-bluegradient();
 }
 
 
