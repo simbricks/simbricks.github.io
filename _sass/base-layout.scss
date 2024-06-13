@@ -123,6 +123,28 @@ footer {
 
   div.container {
     padding: 0rem;
+    div.footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      div.mpisws-logo, nav, div.tumvl-logo {
+        width: 15rem;
+        img {
+          margin: 1rem;
+        }
+      }
+      div.mpisws-logo {
+        img {
+          width: 5rem;
+        }
+      }
+      div.tumvl-logo {
+        img {
+          width: 10rem;
+        }
+      }
+    }
   }
 
   ul {
