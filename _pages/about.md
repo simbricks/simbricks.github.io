@@ -2,8 +2,9 @@
 layout: about
 header_color: bluegradient
 subtitle: |
-  Streamlining design, implementation, and evaluation of heterogenous
-  systems through modular full system simulation.
+  Streamlining heterogenous system design, implementation, and eval,
+  reducing cost and increasing velocity,
+  through modular full system simulation.
 no_page_title: true
 permalink: /
 
