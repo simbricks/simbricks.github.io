@@ -153,6 +153,15 @@ nav#navbar {
           color: $col-sb-org;
         }
       }
+
+      li.slack-button {
+        a {
+          border-radius: .5em;
+          background-color: $col-sb-gre_d1;
+          color: white;
+          padding: 8px;
+        }
+      }
     }
   }
 }
@@ -254,6 +263,10 @@ footer {
 
         li {
           line-height: 1.5;
+        }
+
+        li.slack-button {
+          margin: 0em 0.5em;
         }
       }
     }

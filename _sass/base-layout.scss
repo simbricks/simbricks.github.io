@@ -21,11 +21,12 @@ nav#navbar {
   div.navcontainer {
     width: $width;
     margin: 0px auto;
-    padding: 5px;
-
-    img#logo {
-      vertical-align: top;
-      height: 2.5em;
+    height: 3em;
+    a.brand-logo {
+      img#logo {
+        vertical-align: top;
+        height: 70%;
+      }
     }
  
     button#navbutton {
@@ -39,8 +40,20 @@ nav#navbar {
 
       li {
         display: inline;
-        padding: 0rem 1rem;
-        line-height: 2;
+        padding: 0rem .5rem;
+        line-height: 1.5;
+      }
+
+      li.github-stars {
+        div.github-button {
+          display: inline-flex;
+          align-items: center;
+          vertical-align: middle;
+          height: 100%;
+          span {
+            line-height: 1.5;
+          }
+        }
       }
     }
   }
