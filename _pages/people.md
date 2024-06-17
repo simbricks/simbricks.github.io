@@ -1,7 +1,7 @@
 ---
 layout: people
 header_color: orange
-title: "Community"
+title: "People"
 subtitle: "Meet the SimBricks team"
 permalink: /people.html
 ---
