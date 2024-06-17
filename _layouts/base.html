@@ -36,7 +36,11 @@
     <meta property="og:image" content="{{ card_image | absolute_url }}" />
  
     <!-- twitter card tags additive with the og: tags -->
-    <meta name="twitter:card" content="SimBricks">
+    {%- if page.card_image -%}
+    <meta name="twitter:card" content="summary_large_image">
+    {%- else -%}
+    <meta name="twitter:card" content="summary">
+    {%- endif -%}
     <meta name="twitter:domain" value="{{ site.domain }}" />
     <meta name="twitter:title" value="{{ full_title }}" />
     <meta name="twitter:description" value="{{ card_text }}" />
