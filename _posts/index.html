@@ -1,0 +1,19 @@
+---
+header_color: blue
+title: "Blog"
+layout: base
+subtitle: |
+  Learn more about SimBricks in our blog:
+  the latest news, technical nuggets, use-cases, and opinions.
+permalink: /blog/
+---
+
+<article class="blog">
+  <div class="container">
+    <div class="posts">
+    {% for post in site.posts %}
+      {% include post-block.html %}
+    {% endfor %}
+    </div>
+  </div>
+</li>

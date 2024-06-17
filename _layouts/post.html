@@ -1,0 +1,26 @@
+---
+layout: base
+---
+
+<article class="blog-post">
+  <div class="container">
+    <div class="post-meta">
+      {%- assign person = site.data.people.people[page.author] %}
+      <a href="{{ person.website }}" title="{{ person.name }}">
+        {% include person-img.html %}
+        {{ person.name }}
+      </a>
+      &mdash;
+      {{ page.date | date: "%a, %b %d, %Y" }}
+    </div>
+    <div class="blog-content">
+    {{ content | markdownify }}
+    </div>
+
+    <div class="call-to-action">
+      <a
+          href="https://join.slack.com/t/simbricks/shared_invite/zt-16y96155y-xspnVcm18EUkbUHDcSVonA"
+          title="Join our Slack">Join the Discussion on our Slack</a>
+    </div>
+  </div>
+</article>

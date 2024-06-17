@@ -8,6 +8,7 @@ logo_png: "https://simbricks.github.io/assets/images/simbricks_logo.png"
 
 include:
   - _pages
+  - _posts/index.html
 exclude:
   - README.md
 
@@ -15,6 +16,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path.html
+  posts:
+    output: true
+    permalink: /blog/:path.html
 
 defaults:
   - scope:
@@ -22,7 +26,11 @@ defaults:
       type: "projects"
     values:
       layout: "project"
-
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 kramdown:
   # set header offset for markdown parser as we use h1 as page title, so headers

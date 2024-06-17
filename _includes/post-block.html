@@ -1,0 +1,13 @@
+<div class="post-block {{ include.class }}">
+  <div class="people">
+    {%- assign person = site.data.people.people[post.author] %}
+    {% include person-img.html %}
+  </div>
+  <div class="description">
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    {{ post.subtitle | markdownify }}
+  </div>
+  <div class="link">
+    <a href="{{ post.url | relative_url }}">Read post</a>
+  </div>
+</div>

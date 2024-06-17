@@ -1,6 +1,8 @@
 nav:
   - title: Home
     link: /
+  - title: Blog
+    link: /blog/
   - title: Research
     link: /research.html
   - title: People
