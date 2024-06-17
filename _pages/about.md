@@ -7,7 +7,15 @@ subtitle: |
   through modular full system simulation.
 no_page_title: true
 permalink: /
-
+card_text: |
+  SimBricks is an open-source, modular simulation framework enabling full
+  end-to-end evaluation of modern heterogeneous systems by combining
+  battle-tested simulators for different system components like machines (e.g.
+  QEMU, gem5, Simics), hardware components (e.g. Verilator, Tofino, FEMU SSD),
+  and networks (e.g. ns-3, OMNeT++). SimBricks is fast, scalable, accurate and
+  deterministically connects and synchronizes simulators while being able to run
+  unmodified full system stacks, including applications, operating systems such
+  as Linux, and hardware RTL.
 ---
 
 {::options parse_block_html="true" /}

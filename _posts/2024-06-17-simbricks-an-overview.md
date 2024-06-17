@@ -7,6 +7,7 @@ subtitle: |
 date: 2024-06-17
 author: antoine
 permalink: /blog/simbricks-an-overview.html
+card_image: /assets/images/blog/workflow-highlevel-overview.jpg
 ---
 
 Hello World! It is my great pleasure to kick off our SimBricks blog. The plan
