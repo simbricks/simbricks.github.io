@@ -21,7 +21,8 @@
       {%- else %}
       <li>
       {%- endif %}
-        <a href="{{ site.baseurl }}{{ p.link }}">{{ p.title }}</a>
+        <a href="{{ site.baseurl }}{{ p.link }}"
+          title="{{ p.title }}">{{ p.title }}</a>
       </li>
       {% endfor %}
 
