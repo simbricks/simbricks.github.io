@@ -142,10 +142,13 @@ footer {
       justify-content: center;
       flex-wrap: wrap;
       div.mpisws-logo, nav, div.tumvl-logo {
-        width: 15rem;
+        width: 13rem;
         img {
           margin: 1rem;
         }
+      }
+      nav {
+        width: 17rem;
       }
       div.mpisws-logo {
         img {
