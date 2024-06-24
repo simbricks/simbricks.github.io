@@ -58,21 +58,23 @@ allows us to perform actual end-to-end full-system evaluation in simulation.
 
 
 To show that end-to-end simulation can make a difference, let's look at an
-experiment we conducted in our paper. In this experiment we compared the dctcp
-congestion control algorithm in the ns-3 network simulator to a physical testbed
-and SimBricks end-to-end simulation. We set up two clients and two servers
-sharing a bottleneck link and one large TCP flow for each client-server pair. In
-the case of SimBricks, we use a combination of gem5, ns-3 and an Intel i40e NIC
-simulator to simulate hosts, network and NICs in detail. The graph above shows
-the throughput for varying the dctcp parameter K. The marking threshold balances
-queuing latency and throughput; a lower threshold reduces queue length but risks
-under-utilizing links. Ns-3 underestimates the necessary threshold to achieve
-line rate, as it does not model host processing variations, particularly
-processing delay caused by OS interrupt scheduling. However, SimBricks uses gem5
-for a detailed simulation of the host and thus captures host processing
-variations resulting in measurements that more closely match with those of the
-physical testbed. We conclude only an end-to-end evaluation of the full system
-captures such intricacies.
+experiment we conducted in our
+[paper](https://simbricks.github.io/documents/22sigcomm_simbricks.pdf).
+In this experiment we compared the dctcp congestion control algorithm in the
+ns-3 network simulator to a physical testbed and SimBricks end-to-end
+simulation. We set up two clients and two servers sharing a bottleneck link and
+one large TCP flow for each client-server pair. In the case of SimBricks, we use
+a combination of gem5, ns-3 and an Intel i40e NIC simulator to simulate hosts,
+network and NICs in detail. The graph above shows the throughput for varying the
+dctcp parameter K. The marking threshold balances queuing latency and
+throughput; a lower threshold reduces queue length but risks under-utilizing
+links. Ns-3 underestimates the necessary threshold to achieve line rate, as it
+does not model host processing variations, particularly processing delay caused
+by OS interrupt scheduling. However, SimBricks uses gem5 for a detailed
+simulation of the host and thus captures host processing variations resulting in
+measurements that more closely match with those of the physical testbed. We
+conclude only an end-to-end evaluation of the full system captures such
+intricacies.
 
 We hope that we have been able to convince you that you should conduct
 end-to-end evaluations using full system simulations. If you have any question:
