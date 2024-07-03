@@ -6,7 +6,7 @@ subtitle: |
 date: 2024-07-03
 author: antoine
 permalink: /blog/accelerating-emerging-technologies.html
-card_image: /assets/images/blog/technical-overview.jpg
+card_image: /assets/images/blog/build-emerging-with.jpg
 ---
 
 The future of computing is increasingly heterogeneous and substantial
