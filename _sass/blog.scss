@@ -96,6 +96,18 @@ article.blog-post {
     }
   }
 
+  pre.highlight {
+    background-color: #f6f8fa;
+    padding: 16px;
+  }
+
+  p {
+    code {
+      background-color: #afb8c133;
+      padding: 0px 4px;
+    }
+  }
+
   div.call-to-action {
     margin-top: 2rem;
     a {
