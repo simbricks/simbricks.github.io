@@ -1,9 +1,12 @@
 ---
-title: Easily Run End-to-End Simulation with SimBricks Orchestration Framework
+title: Easily Run Complex Simulations with SimBricks Orchestration
+subtitle: |
+  The SimBricks orchestration framework automatically configures and
+  runs even complex simulations from simple simulation scripts.
 date: 2024-07-11
 author: hejing
 permalink: /blog/orchestration_framework.html
-card_image: TODO
+card_image: /assets/images/blog/orchestration-framework-card.png
 ---
 SimBricks runs end-to-end simulations by assembling multiple component
 simulators running as parallel processes into full system simulations. Component
@@ -18,15 +21,20 @@ The SimBricks orchestration framework simplifies configuring, launching, and
 collecting results from component simulators in SimBricks simulations. All a
 user needs to do is write a Python script that defines the simulation, including
 the system topology, simulators to use, drivers, and applications to run. Then,
-by simply running the simulation with the simbricks-run command, the SimBricks
+by simply running the simulation with the `simbricks-run` command, the SimBricks
 orchestration framework handles the rest of the execution details.
+
+![Overview of the SimBricks orchestration framework. From simulation
+configuration script as the input, into the orchestration framework, which
+launches the simulation comprising multiple connected simulator
+instances.](/assets/images/blog/orchestration-framework.svg)
 
 Now, let’s look at a concrete (simple) example of a SimBricks orchestration
 script. In this script, we set up two hosts connected to a switch via individual
 NICs , and the client host configured to send a ping to the server. There is
 iPython Notebook with another simulation example and more detailed introduction
 [here](https://github.com/simbricks/simbricks-examples/blob/main/first-steps/first_steps.ipynb).
-Feel free to explore it for a deepr understanding.
+Feel free to explore it for a deeper understanding.
 
 # Create an Experiment
 First, let’s start with creating an experiment. 
@@ -89,7 +97,7 @@ server_nic.set_network(network)
 
 # Run the Script with SimBricks Package
 Now, we have everything prepared, running the simulation is as simple as
-invoking  the simbricks-run command: 
+invoking  the `simbricks-run` command:
 `simbricks-run --verbose simple_ping.py `
 
 `simbricks-run` supports a number of  optional command line options to the
