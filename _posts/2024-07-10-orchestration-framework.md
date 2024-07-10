@@ -54,8 +54,8 @@ framework has predefined classes for simulators and software configurations
 (node & app config). Users can easily add new or modified configuration classes
 through inheritance.
 ``` 
-client_config = I40eLinuxNode()  # boot Linux with i40e
-NIC driver client_config.ip = '10.0.0.1' 
+client_config = I40eLinuxNode()  # boot Linux with i40e NIC driver
+client_config.ip = '10.0.0.1' 
 client_config.app = PingClient(server_ip='10.0.0.2') 
 client = Gem5Host(client_config) 
 client.name = 'client' 
@@ -103,9 +103,7 @@ invoking  the `simbricks-run` command:
 `simbricks-run` supports a number of  optional command line options to the
 Simbricks runtime to control execution, set paths of inputs & outputs, etc..
 After execution, you will find the aggregated simulation outputs from all
-simulators in a JSON file, in the specific format for each component
-simulatorWould probably be good to show an abbreviated output json
-(pretty-printed) to give folks an idea what the output looks like.
+simulators in a JSON file, in the specific format for each component simulator.
 
 By following these steps, you can build and run your own end-to-end simulation
 and collect the results. You can experiment with different combinations of
