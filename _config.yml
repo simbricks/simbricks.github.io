@@ -35,3 +35,5 @@ kramdown:
   # set header offset for markdown parser as we use h1 as page title, so headers
   # in the content need to start at h2
   header_offset: 1
+  input: GFM
+highlighter: rouge

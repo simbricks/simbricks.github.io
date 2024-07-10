@@ -38,7 +38,7 @@ Feel free to explore it for a deeper understanding.
 
 # Create an Experiment
 First, let’s start with creating an experiment. 
-```
+```python
 from simbricks.orchestration.experiments import Experiment 
 from simbricks.orchestration.nodeconfig import ( I40eLinuxNode, IdleHost, PingClient) 
 from simbricks.orchestration.simulators import Gem5Host, I40eNIC, SwitchNet
@@ -53,7 +53,7 @@ it plus the software we want to run in the Host. The SimBricks orchestration
 framework has predefined classes for simulators and software configurations
 (node & app config). Users can easily add new or modified configuration classes
 through inheritance.
-``` 
+``` python
 client_config = I40eLinuxNode()  # boot Linux with i40e NIC driver
 client_config.ip = '10.0.0.1' 
 client_config.app = PingClient(server_ip='10.0.0.2') 
@@ -65,7 +65,7 @@ e.add_host(client)
 
 # Create & Attach the Client’s NIC
 Next, instantiate the NIC simulator and attach it to the host. 
-``` 
+```python
 client_nic = I40eNIC() 
 e.add_nic(client_nic) 
 client.add_nic(client_nic) 
@@ -73,7 +73,7 @@ client.add_nic(client_nic)
 
 # Repeat for Server Host and its NIC
 Then, we repeat the same procedure for instantiating the server host and NIC: 
-```
+```python
 server_config = I40eLinuxNode()  # boot Linux with i40e NIC driver
 server_config.ip = '10.0.0.2' 
 server_config.app = IdleHost() 
@@ -88,7 +88,7 @@ server.add_nic(server_nic)
 # Connect the NICs to the Network
 The last step is to instantiate the network simulator (simple switch here) and
 connect the NICs of our hosts to it. 
-``` 
+```python
 network = SwitchNet()
 e.add_network(network) 
 client_nic.set_network(network)
