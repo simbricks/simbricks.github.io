@@ -3,7 +3,7 @@ title: Easily Run Complex Simulations with SimBricks Orchestration
 subtitle: |
   The SimBricks orchestration framework automatically configures and
   runs even complex simulations from simple simulation scripts.
-date: 2024-07-11
+date: 2024-07-10
 author: hejing
 permalink: /blog/orchestration_framework.html
 card_image: /assets/images/blog/orchestration-framework-card.png
