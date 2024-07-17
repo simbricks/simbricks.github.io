@@ -1,7 +1,8 @@
 ---
 title: "Streamline Your Chip Design with SimBricks"
 subtitle: |
-  How can SimBricks help make chip design faster, cheaper, and lower risk?
+  How can SimBricks help make chip design
+  faster, cheaper, and lower risk?
 date: 2024-07-17
 author: jakob
 permalink: /blog/chip-design-flow.html
