@@ -5,6 +5,10 @@ title: "SimBricks"
 logo: "https://simbricks.github.io/assets/images/simbricks_logo.svg"
 logo_png: "https://simbricks.github.io/assets/images/simbricks_logo.png"
 
+newsletter:
+  endpoint: "https://TODO"
+  privacy-policy: https://data-protection.mpi-klsb.mpg.de/sws/simbricks.io
+
 include:
   - _pages
   - _posts/index.html

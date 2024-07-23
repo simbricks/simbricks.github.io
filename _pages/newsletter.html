@@ -1,0 +1,105 @@
+---
+header_color: blue
+title: "Keep me updated!"
+layout: base
+subtitle: Join our newsletter for keeping up-to-date with the latest news.
+permalink: /newsletter/
+---
+
+<div class="container">
+    <h1>Keep me updated!</h1>
+
+    <form id="newsletter-form">
+        <div class="form-container">
+            <label for="firstName" class="form-label">First Name *</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" required="">
+        </div>
+
+        <div class="form-container">
+            <label for="lastName" class="form-label">Last Name *</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" required="">
+        </div>
+
+        <div class="form-container">
+            <label for="email" class="form-label">Email Address *</label>
+            <input type="email" class="form-control" id="email" name="email" required="">
+        </div>
+
+        <div class="form-container">
+            <label for="company" class="form-label">Company (optional)</label>
+            <input type="text" class="form-control" id="company" name="company">
+        </div>
+
+        <div class="form-container">
+            <label for="comments" class="form-label">Comments (optional)</label>
+            <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+        </div>
+
+        <div class="form-container">
+            <input type="checkbox" required class="privacy-policy-checkbox" id="privacyPolicy" name="privacyPolicy"
+                required="">
+            <label class="form-check-label" for="privacyPolicy">I accept the <a
+                    href="{{ site.newsletter.privacy-policy }}">privacy policy</a> *.</label>
+        </div>
+
+        <button type="submit" id="newsletter-form-submit-button">Submit</button>
+    </form>
+
+    <div class="newsletter-form-footer">
+        <div class="newsletter-mail-info">
+            <p>
+                You can always contact us through the following email addresses: <a addbody="true"
+                    href="mailto:info@simbricks.io">info@simbricks.io</a>
+            </p>
+        </div>
+
+        <div class="newsletter-required-info">
+            <p>* required fields</p>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function checkValid() {
+            let isValid = function (id) {
+                let input = document.getElementById(id);
+                if (input.checkValidity()) {
+                    return true;
+                }
+                return false;
+            }
+            if (isValid("firstName")
+                && isValid("lastName")
+                && isValid("email")
+                && isValid("privacyPolicy")) {
+                console.log("form IS VALID!");
+                return true;
+            }
+            return false;
+        }
+
+        $(document).ready(function () {
+            $("#newsletter-form-submit-button").on("click", function (event) {
+                if (!checkValid()) {
+                    return;
+                }
+
+                event.preventDefault();
+                let formData = JSON.stringify($("#newsletter-form").serializeArray());
+                $.ajax({
+                    type: "POST",
+                    url: "{{ site.newsletter.endpoint }}",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: formData,
+                    success: function () {
+                        alert("successfully subscribed newsletter");
+                    },
+                    error: function () {
+                        alert("error when trying to subscribe newsletter");
+                    },
+                });
+            });
+        });
+    </script>
+</div>

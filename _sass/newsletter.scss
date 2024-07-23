@@ -1,0 +1,60 @@
+$info-input-text-size: 18px;
+$border-radius: 0.3em;
+
+#newsletter-form {
+    .form-container {
+
+        margin: 1em 0em 1em 0em;
+
+        .form-label {
+            margin: 0.5em;
+            display: inline-block;
+            font-size: $info-input-text-size;
+        }
+
+        .form-control {
+            width: 100%;
+            margin: 0.5em;
+            border: 1px solid lightgray;
+            border-radius: $border-radius;
+            line-height: 2;
+        }
+
+        #newsletter-form-submit-button {
+            background-color: aqua;
+        }
+
+        .privacy-policy-checkbox {
+            margin: 0em 0em 0em 0.5em;
+        }
+    }
+
+    #newsletter-form-submit-button {
+        margin: 1em 0em 1em 0.5em;
+        padding: 0.5em;
+        font-family: $font-title + 4;
+        width: 100px;
+        font-size: $info-input-text-size;
+        border: 1px solid lightgray;
+        border-radius: $border-radius;
+        color: white;
+        background-color: $col-sb-org-l1;
+    }
+    #newsletter-form-submit-button:hover {
+        background-color: $col-sb-org;
+    }
+}
+
+
+
+.newsletter-form-footer {
+    .newsletter-mail-info {
+        font-size: $info-input-text-size;
+        margin: 1em 0em 1em 0.5em;
+    }
+
+    .newsletter-required-info {
+        font-size: $info-input-text-size - 4;
+        margin: 1em 0em 1em 0.5em;
+    }
+}

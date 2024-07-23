@@ -157,9 +157,24 @@ nav#navbar {
       li.slack-button {
         a {
           border-radius: .5em;
-          background-color: $col-sb-gre_d1;
+          background-color: $col-sb-gre;
           color: white;
           padding: 8px;
+        }
+        a:hover {
+          background-color: $col-sb-gre_d1;
+        }
+      }
+
+      li.newsletter-button {
+        a {
+          border-radius: .5em;
+          background-color: $col-sb-org-l1;
+          color: white;
+          padding: 8px;
+        }
+        a:hover {
+          background-color: $col-sb-org;
         }
       }
     }
@@ -252,7 +267,11 @@ footer {
         }
 
         li.slack-button {
-          margin: 0em 0.5em;
+          margin: 1em 0.5em;
+        }
+
+        li.newsletter-button {
+          margin: 1em 0.5em;
         }
       }
     }
