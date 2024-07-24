@@ -12,27 +12,27 @@ permalink: /newsletter/
     <form id="newsletter-form">
         <div class="form-container">
             <label for="firstName" class="form-label">First Name *</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" required="">
+            <input type="text" class="form-control" id="firstName" name="firstName" required="" maxlength="80">
         </div>
 
         <div class="form-container">
             <label for="lastName" class="form-label">Last Name *</label>
-            <input type="text" class="form-control" id="lastName" name="lastName" required="">
+            <input type="text" class="form-control" id="lastName" name="lastName" required="" maxlength="80">
         </div>
 
         <div class="form-container">
             <label for="email" class="form-label">Email Address *</label>
-            <input type="email" class="form-control" id="email" name="email" required="">
+            <input type="email" class="form-control" id="email" name="email" required="" maxlength="80">
         </div>
 
         <div class="form-container">
             <label for="company" class="form-label">Company (optional)</label>
-            <input type="text" class="form-control" id="company" name="company">
+            <input type="text" class="form-control" id="company" name="company" maxlength="120">
         </div>
 
         <div class="form-container">
             <label for="comments" class="form-label">Comments (optional)</label>
-            <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+            <textarea class="form-control" id="comments" name="comments" rows="4" maxlength="500"></textarea>
         </div>
 
         <div class="form-container">
@@ -71,11 +71,21 @@ permalink: /newsletter/
             if (isValid("firstName")
                 && isValid("lastName")
                 && isValid("email")
-                && isValid("privacyPolicy")) {
-                console.log("form IS VALID!");
+                && isValid("privacyPolicy")
+                && isValid("company")
+                && isValid("comments")) {
                 return true;
             }
             return false;
+        }
+
+        function convertFormToJSON() {
+            const array = $("#newsletter-form").serializeArray();
+            const json = {};
+            $.each(array, function () {
+                json[this.name] = this.value || "";
+            });
+            return JSON.stringify(json);
         }
 
         $(document).ready(function () {
@@ -85,12 +95,13 @@ permalink: /newsletter/
                 }
 
                 event.preventDefault();
-                let formData = JSON.stringify($("#newsletter-form").serializeArray());
+                let formData = convertFormToJSON();
+                console.log(formData);
                 $.ajax({
                     type: "POST",
                     url: "{{ site.newsletter.endpoint }}",
                     dataType: "json",
-                    contentType: "application/json",
+                    contentType: "application/json;charset=UTF-8",
                     data: formData,
                     success: function () {
                         alert("successfully subscribed newsletter");

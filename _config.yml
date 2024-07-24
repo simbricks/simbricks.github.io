@@ -6,7 +6,7 @@ logo: "https://simbricks.github.io/assets/images/simbricks_logo.svg"
 logo_png: "https://simbricks.github.io/assets/images/simbricks_logo.png"
 
 newsletter:
-  endpoint: "https://TODO"
+  endpoint: "http://127.0.0.1:9002/subscribers"
   privacy-policy: https://data-protection.mpi-klsb.mpg.de/sws/simbricks.io
 
 include:
