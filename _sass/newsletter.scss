@@ -40,12 +40,21 @@ $border-radius: 0.3em;
         color: white;
         background-color: $col-sb-org-l1;
     }
+
     #newsletter-form-submit-button:hover {
         background-color: $col-sb-org;
     }
 }
 
-
+#subscribe-success-banner {
+    display: none;
+    width: 100%;
+    color: white;
+    font-size: $info-input-text-size;
+    border: 1px solid lightgray;
+    border-radius: $border-radius;
+    text-align: center;
+}
 
 .newsletter-form-footer {
     .newsletter-mail-info {

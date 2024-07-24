@@ -45,6 +45,10 @@ permalink: /newsletter/
         <button type="submit" id="newsletter-form-submit-button">Submit</button>
     </form>
 
+    <div id="subscribe-success-banner">
+        <p></p>
+    </div>
+
     <div class="newsletter-form-footer">
         <div class="newsletter-mail-info">
             <p>
@@ -102,6 +106,13 @@ permalink: /newsletter/
                 return JSON.stringify(json);
             }
 
+            function showBanner(text, success) {
+                $('#subscribe-success-banner').css('background-color', success ? 'green' : 'red');
+                $('#subscribe-success-banner p').text(text);
+                $('#subscribe-success-banner').fadeIn('slow');
+                $('#subscribe-success-banner').delay(2000).fadeOut('slow');
+            }
+
             function handelSubmit(event) {
                 if (!checkValid()) {
                     return;
@@ -110,17 +121,17 @@ permalink: /newsletter/
                 event.preventDefault();
 
                 let formData = convertFormToJSON(event.target);
-                
+
                 $.ajax({
                     type: "POST",
                     url: "{{ site.newsletter.endpoint }}",
                     contentType: "application/json;charset=UTF-8",
                     data: formData,
                     success: function () {
-                        alert("successfully subscribed newsletter");
+                        showBanner("Successfully subscribed to SimBricks newsletter.", true);
                     },
                     error: function () {
-                        alert("error when trying to subscribe newsletter");
+                        showBanner("Error when trying to subscribe newsletter. Please try again later.", false);
                     },
                 });
             }
