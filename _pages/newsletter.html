@@ -91,12 +91,12 @@ permalink: /newsletter/
                     "email": formData.get("email"),
                     "name": `${formData.get("firstName")} ${formData.get("lastName")}`,
                     "status": "enabled",
-                    "lists": [2],
+                    "lists": [3],
                     "attribs": {
                         "company": formData.get("company"),
                         "comments": formData.get("comments")
                     },
-                    "preconfirm_subscriptions": true
+                    "preconfirm_subscriptions": false
                 };
 
                 return JSON.stringify(json);
@@ -114,7 +114,6 @@ permalink: /newsletter/
                 $.ajax({
                     type: "POST",
                     url: "{{ site.newsletter.endpoint }}",
-                    dataType: "json",
                     contentType: "application/json;charset=UTF-8",
                     data: formData,
                     success: function () {
