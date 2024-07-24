@@ -121,12 +121,12 @@ permalink: /newsletter/
                 event.preventDefault();
 
                 let formData = convertFormToJSON(event.target);
-
                 $.ajax({
                     type: "POST",
                     url: "{{ site.newsletter.endpoint }}",
                     contentType: "application/json;charset=UTF-8",
                     data: formData,
+                    timeout: 30000,
                     success: function () {
                         showBanner("Successfully subscribed to SimBricks newsletter.", true);
                     },
