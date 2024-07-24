@@ -58,45 +58,59 @@ permalink: /newsletter/
         </div>
     </div>
 
-
     <script type="text/javascript">
-        function checkValid() {
-            let isValid = function (id) {
-                let input = document.getElementById(id);
-                if (input.checkValidity()) {
+        $(document).ready(function () {
+            function checkValid() {
+                let isValid = function (id) {
+                    let input = document.getElementById(id);
+                    if (input.checkValidity()) {
+                        return true;
+                    }
+                    return false;
+                }
+                if (isValid("firstName")
+                    && isValid("lastName")
+                    && isValid("email")
+                    && isValid("privacyPolicy")
+                    && isValid("company")
+                    && isValid("comments")) {
                     return true;
                 }
                 return false;
             }
-            if (isValid("firstName")
-                && isValid("lastName")
-                && isValid("email")
-                && isValid("privacyPolicy")
-                && isValid("company")
-                && isValid("comments")) {
-                return true;
+
+            function getFormValue(ident) {
+                let input = document.getElementById(id);
+                return input.nodeValue();
             }
-            return false;
-        }
 
-        function convertFormToJSON() {
-            const array = $("#newsletter-form").serializeArray();
-            const json = {};
-            $.each(array, function () {
-                json[this.name] = this.value || "";
-            });
-            return JSON.stringify(json);
-        }
+            function convertFormToJSON(data) {
+                const formData = new FormData(data);
 
-        $(document).ready(function () {
-            $("#newsletter-form-submit-button").on("click", function (event) {
+                const json = {
+                    "email": formData.get("email"),
+                    "name": `${formData.get("firstName")} ${formData.get("lastName")}`,
+                    "status": "enabled",
+                    "lists": [2],
+                    "attribs": {
+                        "company": formData.get("company"),
+                        "comments": formData.get("comments")
+                    },
+                    "preconfirm_subscriptions": true
+                };
+
+                return JSON.stringify(json);
+            }
+
+            function handelSubmit(event) {
                 if (!checkValid()) {
                     return;
                 }
 
                 event.preventDefault();
-                let formData = convertFormToJSON();
-                console.log(formData);
+
+                let formData = convertFormToJSON(event.target);
+                
                 $.ajax({
                     type: "POST",
                     url: "{{ site.newsletter.endpoint }}",
@@ -110,7 +124,11 @@ permalink: /newsletter/
                         alert("error when trying to subscribe newsletter");
                     },
                 });
-            });
+            }
+
+
+            const form = document.querySelector('form');
+            form.addEventListener('submit', handelSubmit);
         });
     </script>
 </div>
